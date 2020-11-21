@@ -3,4 +3,6 @@ class Category < ApplicationRecord
 
   validates_presence_of :title
 
+  default_scope {order(title: :asc)}
+
 end
