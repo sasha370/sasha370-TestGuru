@@ -10,10 +10,10 @@ categories = Category.create!([
                               ])
 
 tests = Test.create!([
-                         { title: "Ruby start", level: 1, category_id: categories[0].id},
-                         { title: "RoR start", level: 2, category_id: categories[0].id},
-                         { title: "HTML base", level: 1, category_id: categories[1].id},
-                         { title: "CSS base", level: 1, category_id: categories[2].id}
+                         { title: "Ruby start", level: 1, category_id: categories[0].id,author: users[0]},
+                         { title: "RoR start", level: 2, category_id: categories[0].id,author: users[0] },
+                         { title: "HTML base", level: 1, category_id: categories[1].id,author: users[0] },
+                         { title: "CSS base", level: 1, category_id: categories[2].id,author: users[0] }
                      ])
 
 questions = Question.create!([
