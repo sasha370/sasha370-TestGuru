@@ -1,6 +1,6 @@
 users = User.create!([
-                         { name: Faker::Name.name, password: '123456' },
-                         { name: Faker::Name.name, password: '123456' }
+                         { name: Faker::Name.name, password: '123456', email: Faker::Internet.email },
+                         { name: Faker::Name.name, password: '123456', email: Faker::Internet.email }
                      ])
 
 categories = Category.create!([
