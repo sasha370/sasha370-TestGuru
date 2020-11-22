@@ -1,6 +1,5 @@
 <p id="notice"><%= notice %></p>
-<h3>Тест: <%= @test.title %></h3>
 <p>Вопрос: <%= @question.body %></p>
 
-<%= link_to 'Edit', edit_test_question_path(@test, @question) %> |
-<%= link_to 'Back', test_questions_path(@test) %>
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', test_questions_path(@question.test_id) %>

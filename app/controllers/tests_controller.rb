@@ -9,7 +9,6 @@ class TestsController < ApplicationController
     @questions = @test.questions
   end
 
-
   private
 
   def set_test
@@ -19,5 +18,4 @@ class TestsController < ApplicationController
   def tests_params
     params.require(:test).permit(:title, :level, :category_id)
   end
-
 end
