@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= link_to 'Тест', test_path(@test) %>,  Questions</h1>
+<%= render 'questions/question', questions: @questions %>
+<br>
+
+<%= link_to 'New Question', new_test_question_path(@test) %>
