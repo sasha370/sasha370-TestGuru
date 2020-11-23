@@ -1,5 +1,14 @@
 <p id="notice"><%= notice %></p>
-<p>Вопрос: <%= @question.body %></p>
 
-<%= link_to 'Edit', edit_question_path(@question) %> |
-<%= link_to 'Back', test_questions_path(@question.test_id) %>
+<div class="card">
+  <div class="card-header">
+    Тест: <%= @question.test.title %>
+  </div>
+  <div class="card-body">
+    <p class="card-text"><%= @question.body %></p>
+
+    <%= link_to 'Edit', edit_question_path(@question) %> |
+    <%= link_to 'Back', test_questions_path(@question.test_id) %>
+  </div>
+</div>
+
