@@ -1,6 +1,12 @@
-<h1>Editing Answer</h1>
-
-<%= render 'form', answer: @answer %>
-
-<%= link_to 'Show', @answer %> |
-<%= link_to 'Back', answers_path %>
+<div class="card">
+  <div class="card-header">
+    <%= answer_header(@answer) %>
+  </div>
+  <div class="card-body">
+    <%= render 'form', answer: @answer %>
+  </div>
+  <div class="card-footer">
+    <%= link_to 'Показать', @answer %> |
+    <%= link_to 'Назад к вопросу', question_path(@answer.question) %>
+  </div>
+</div>

@@ -1,14 +1,30 @@
-<p id="notice"><%= notice %></p>
-
 <div class="card">
   <div class="card-header">
     Тест: <%= @question.test.title %>
   </div>
-  <div class="card-body">
-    <p class="card-text"><%= @question.body %></p>
 
-    <%= link_to 'Edit', edit_question_path(@question) %> |
-    <%= link_to 'Back', test_questions_path(@question.test_id) %>
+  <div class="card-body">
+    <p id="notice"><%= notice %></p>
+    <h3 class="card-text"><%= @question.body %></h3>
+    <%= link_to 'Добавить ответ', new_question_answer_path(@question), class: 'btn btn-sm btn-primary' %>
+    <br>
+    <br>
+    <table class="table">
+      <thead class="bg-primary text-light">
+      <tr>
+        <th scope="col">Ответы</th>
+        <th colspan="3" class=" text-center">Действия</th>
+      </tr>
+      </thead>
+      <tbody>
+      <%= render @question.answers %>
+      </tbody>
+    </table>
+
+    <div class="card-footer">
+      <%= link_to 'Редактировать вопрос', edit_question_path(@question) %> |
+      <%= link_to 'К вопросам', test_questions_path(@question.test_id) %>
+    </div>
   </div>
 </div>
 

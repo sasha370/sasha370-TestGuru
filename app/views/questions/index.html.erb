@@ -1,8 +1,15 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Вопросы к тесту: <%= @test.title %></h1>
-<%= render 'question', questions: @questions %>
-<br>
-
-<%= link_to 'Новый вопрос', new_test_question_path(@test) %> |
-<%= link_to 'Вернуться к тесту', test_path(@test) %>
+<div class="card">
+  <div class="card-header">
+    <h1>Вопросы к тесту: <%= @test.title %></h1>
+  </div>
+  <div class="card-body">
+    <p id="notice"><%= notice %></p>
+    <%= render 'question', questions: @questions %>
+    <div>
+      <%= link_to 'Новый вопрос', new_test_question_path(@test), class: 'btn btn-sm btn-primary' %>
+    </div>
+  </div>
+  <div class="card-footer">
+    <%= link_to 'Вернуться к тесту', test_path(@test) %>
+  </div>
+</div>
