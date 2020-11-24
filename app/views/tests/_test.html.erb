@@ -1,0 +1,8 @@
+<tr>
+  <td><%= test.id %></td>
+  <td><%= link_to "#{test.title}", test_path(test) %></td>
+  <td><%= test.level %></td>
+  <td><%= test.category.title %></td>
+  <td><%= link_to "Вопросы (#{test.questions.count})", test_questions_path(test) %></td>
+  <td><%= button_to "Начать", start_test_path(test), class: 'btn btn-sm btn-success' %></td>
+</tr>

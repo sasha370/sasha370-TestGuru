@@ -9,18 +9,11 @@
     <th scope="col">Уровень</th>
     <th scope="col">Категория</th>
     <th scope="col">Вопросы</th>
+    <th scope="col">Начать тест</th>
   </tr>
   </thead>
   <tbody>
-  <% @tests.each do |test| %>
-    <tr>
-      <td><%= test.id %></td>
-      <td><%= link_to "#{test.title}", test_path(test) %></td>
-      <td><%= test.level %></td>
-      <td><%= test.category.title %></td>
-      <td><%= link_to "Вопросы (#{test.questions.count})", test_questions_path(test) %></td>
-    </tr>
-  <% end %>
+  <%= render @tests %>
   </tbody>
 </table>
 <br>

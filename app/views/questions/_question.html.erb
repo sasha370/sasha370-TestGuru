@@ -1,18 +1,8 @@
-<table class="table">
-  <thead class="bg-primary text-light">
+<%# questions.each do |question| %>
   <tr>
-    <th scope="col">Вопрос</th>
-    <th colspan="3" class=" text-center">Действия</th>
+    <td><%= question.body %></td>
+    <td><%= link_to 'Show  ', question_path(question) %></td>
+    <td><%= link_to 'Edit  ', edit_question_path(question) %></td>
+    <td><%= link_to 'Destroy', question_path(question), method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
-  </thead>
-  <tbody>
-  <% questions.each do |question| %>
-    <tr>
-      <td><%= question.body %></td>
-      <td><%= link_to 'Show  ', question_path(question) %></td>
-      <td><%= link_to 'Edit  ', edit_question_path(question) %></td>
-      <td><%= link_to 'Destroy', question_path(question), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+<%# end %>
