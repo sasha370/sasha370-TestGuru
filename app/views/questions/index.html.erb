@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= link_to 'Тест', test_path(@test) %>,  Questions</h1>
+<h1>Вопросы к тесту: <%= @test.title %></h1>
 <%= render 'question', questions: @questions %>
 <br>
 
-<%= link_to 'New Question', new_test_question_path(@test) %>
+<%= link_to 'Новый вопрос', new_test_question_path(@test) %> |
+<%= link_to 'Вернуться к тесту', test_path(@test) %>
