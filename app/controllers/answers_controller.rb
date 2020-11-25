@@ -15,7 +15,7 @@ class AnswersController < ApplicationController
   def create
     @answer = @question.answers.new(answer_params)
     if @answer.save
-      redirect_to @answer, notice: 'Answer was successfully created.'
+      redirect_to @question, notice: 'Answer was successfully created.'
     else
       render :new
     end
@@ -23,7 +23,7 @@ class AnswersController < ApplicationController
 
   def update
     if @answer.update(answer_params)
-      redirect_to @answer, notice: 'Answer was successfully updated.'
+      redirect_to @question, notice: 'Answer was successfully updated.'
     else
       render :edit
     end
