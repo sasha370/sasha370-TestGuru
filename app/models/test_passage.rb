@@ -5,6 +5,8 @@ class TestPassage < ApplicationRecord
   before_validation :set_first_question, on: :create
   before_update :before_update_set_next_question
 
+  PASS_TEST_PERCENT = 85
+
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
     save!
@@ -16,6 +18,22 @@ class TestPassage < ApplicationRecord
 
   def before_update_set_next_question
     self.current_question = next_question
+  end
+
+  def current_question_index
+    test.questions.order(:id).where('id < ?', current_question.id).size + 1
+  end
+
+  def total_questions_in_test
+    test.questions.count
+  end
+
+  def total_progress_in_percent
+    (correct_questions.to_f / total_questions_in_test.to_f * 100).to_i
+  end
+
+  def success?
+    total_progress_in_percent >= PASS_TEST_PERCENT
   end
 
   private
@@ -30,7 +48,7 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answer
-    current_question.answers.correct_answer
+    current_question.answers.correct_answers
   end
 
   def next_question

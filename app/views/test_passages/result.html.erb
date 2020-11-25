@@ -1,1 +1,6 @@
 <h1> Тест <%= @test_passage.test.title %> завершен!  </h1>
+<% if @test_passage.success?%>
+  <h2> Поздравляю! Вы прошли тест, т.к. ответили на <span class="text-success"> <%= @test_passage.total_progress_in_percent%>% </span> вопросов правильно </h2>
+<%else %>
+  <h2> Вы не прошли тест, т.к. ответили правильно всего на <span class="text-danger"> <%= @test_passage.total_progress_in_percent%>% </span> вопросов! </h2>
+<% end %>

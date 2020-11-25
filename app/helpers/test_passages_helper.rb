@@ -1,4 +1,3 @@
 module TestPassagesHelper
 
-
 end

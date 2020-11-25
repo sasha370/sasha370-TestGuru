@@ -1,7 +1,7 @@
 <h1>Вы проходите тест: <%= @test_passage.test.title %> </h1>
 
 <p>
-  Текущий вопрос: <%=@counter %> из <%= @test_passage.test.questions.count %>
+  Текущий вопрос: <%= @test_passage.current_question_index %> из <%= @test_passage.total_questions_in_test %>
 </p>
 <p>
   <%= @test_passage.current_question.body %>
