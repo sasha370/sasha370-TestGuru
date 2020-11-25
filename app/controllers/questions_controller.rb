@@ -28,7 +28,7 @@ class QuestionsController < ApplicationController
 
   def update
     if @question.update(question_params)
-      redirect_to test_questions_path(@question.test_id), notice: 'Question was successfully updated.'
+      redirect_to test_path(@question.test_id), notice: 'Question was successfully updated.'
     else
       render :edit
     end
@@ -36,7 +36,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to test_questions_path(@question.test_id), notice: 'Question was successfully destroyed.'
+    redirect_to test_path(@question.test_id), notice: 'Question was successfully destroyed.'
   end
 
   private
