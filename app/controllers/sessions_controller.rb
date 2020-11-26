@@ -10,9 +10,9 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to tests_path, flash[:notice] = 'Вы успешно вошли!'
+      redirect_to tests_path, notice: 'Вы успешно вошли!'
     else
-      flash.now[:alert] = 'Вам необходимо войти или зарегистрироваться!'
+      flash.now[:alert] = 'Введите данные или зарегистрируйтесь!'
       render :new
     end
   end
