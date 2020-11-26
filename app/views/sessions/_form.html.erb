@@ -1,0 +1,21 @@
+<!--TODO оформление -->
+<%= form_with url: sessions_path, local: true do |form| %>
+  <% if flash[:alert] %>
+    <%= content_tag :p, flash[:alert], class: 'flash alert' %>
+  <% end %>
+
+  <div>
+    <%= form.label :email %>
+    <%= form.text_field :email, placeholder: 'Email', class: 'form-control', id: :email %>
+  </div>
+
+  <div>
+    <%= form.label :password %>
+    <%= form.password_field :password, placeholder: 'Пароль', class: 'form-control', id: :password %>
+  </div>
+
+  <div>
+    <br>
+    <%= form.submit 'Войти', class: "actions btn btn-primary" %>
+  </div>
+<% end %>
