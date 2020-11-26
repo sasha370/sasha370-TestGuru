@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless current_user
+      cookies[:from_url] = request.original_url
       redirect_to login_path, alert: 'Вам необходимо войти или зарегистрироваться!'
     end
   end
