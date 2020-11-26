@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/new'
   root to: 'tests#index'
 
   resources :tests do
@@ -13,8 +14,12 @@ Rails.application.routes.draw do
 
   resources :test_passages, only: %i[show update] do
     member do
-      get :result  # /test_passages/:id/result
+      get :result # /test_passages/:id/result
     end
   end
+
+  resources :users, only: %i[create]
+  get :signup, to: 'users#new'
+
 
 end
