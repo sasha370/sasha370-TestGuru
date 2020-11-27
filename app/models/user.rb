@@ -1,14 +1,21 @@
-require 'digest/sha2'
-
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  #
+  devise :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :validatable,
+         :confirmable,
+         :trackable
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   has_many :test_passages
   has_many :tests, through: :test_passages
   has_many :created_tests, class_name: 'Test', foreign_key: 'user_id'
   validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX,
                                                                 message: "некорректен!" }
-
-  has_secure_password
 
   def passed_tests_by_level(level)
     tests.where(level: level)
