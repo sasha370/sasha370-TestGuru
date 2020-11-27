@@ -1,9 +1,14 @@
+require 'digest/sha2'
+
 class User < ApplicationRecord
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   has_many :test_passages
   has_many :tests, through: :test_passages
   has_many :created_tests, class_name: 'Test', foreign_key: 'user_id'
+  validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX,
+                                                                message: "некорректен!" }
 
-  validates :email, :name, :password, presence: true
+  has_secure_password
 
   def passed_tests_by_level(level)
     tests.where(level: level)
