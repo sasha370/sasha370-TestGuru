@@ -5,7 +5,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <% if logged_in? %>
+    <% if current_user %>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <%= link_to 'Тесты', tests_path, class: 'nav-link' %>
@@ -22,16 +22,16 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
         </form>
         <li class="nav-item">
-          <%= link_to 'Выйти', logout_path, class: 'ml-1 mt-1 btn btn-sm btn-danger' %>
+          <%= link_to 'Выйти', destroy_user_session_path, method: :delete,  class: 'ml-1 mt-1 btn btn-sm btn-danger' %>
         </li>
       </ul>
     <% else %>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <%= link_to 'Вход', login_path, class: 'nav-link' %>
+          <%= link_to 'Вход', new_user_session_path, class: 'nav-link' %>
         </li>
         <li class="nav-item active">
-          <%= link_to 'Регистрация', users_new_path, class: 'nav-link' %>
+          <%= link_to 'Регистрация', new_user_registration_path, class: 'nav-link' %>
         </li>
       </ul>
     <% end %>

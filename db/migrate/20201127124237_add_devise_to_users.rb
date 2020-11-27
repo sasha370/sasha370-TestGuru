@@ -45,9 +45,7 @@ class AddDeviseToUsers < ActiveRecord::Migration[6.0]
   end
 
   def self.down
-    remove_columns :users, :encrypted_password, :reset_password_token, :reset_password_sent_at, :remember_created_at,
-                  :sigh_in_count, :current_sigh_in_at, :last_sigh_in_at, :current_sign_in_ip, :last_sign_in_ip, :confirmation_token,
-                  :confirmed_at, :confirmation_sent_at, :unconfirmed_email
+    remove_columns :users, :encrypted_password, :reset_password_token, :reset_password_sent_at, :remember_created_at, :sign_in_count, :current_sigh_in_at, :last_sigh_in_at, :current_sign_in_ip, :last_sign_in_ip, :confirmation_token, :confirmed_at, :confirmation_sent_at, :unconfirmed_email
 
     add_column :users, :password_digest, :string
     change_column_default :users, :email, nil

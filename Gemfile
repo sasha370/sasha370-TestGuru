@@ -11,6 +11,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'devise-bootstrap-views'
 
+
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
@@ -24,6 +25,7 @@ group :development do
   gem 'listen', '~> 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'letter_opener'
 end
 
 group :test do
