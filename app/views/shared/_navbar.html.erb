@@ -6,38 +6,41 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <% if current_user %>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <%= link_to 'Тесты', tests_path, class: 'nav-link' %>
-        </li>
-
-        <% if current_user.is_a?(Admin) %>
+      <% if current_user.is_a?(Admin) %>
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <%= link_to 'Создать тест', tests_path, class: 'nav-link' %>
+            <%= link_to 'Тесты', admin_tests_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Создать тест', new_admin_test_path, class: 'nav-link' %>
           </li>
           <li class="nav-item active">
             <!--            TODO -->
             <%= link_to 'Пользователи', '#', class: 'nav-link' %>
           </li>
-          </ul>
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item active">
-              <span class="navbar-text"> <b>Амин-панель: <%= current_user.first_name %> <%= current_user.last_name %> </b></span>
-            </li>
-          </ul>
-        <% else %>
-          </ul>
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item active">
-              <%= link_to "Добро пожаловать, #{current_user.email}", root_path, class: 'nav-link' %>
-            </li>
-          </ul>
-        <% end %>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item ">
-            <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'ml-1 mt-1 btn btn-sm btn-danger' %>
+        </ul>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <span class="navbar-text"> <b>Амин-панель: <%= current_user.first_name %> <%= current_user.last_name %> </b></span>
           </li>
         </ul>
+      <% else %>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to 'Тесты', tests_path, class: 'nav-link' %>
+          </li>
+        </ul>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <%= link_to "Добро пожаловать, #{current_user.email}", root_path, class: 'nav-link' %>
+          </li>
+        </ul>
+      <% end %>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item ">
+          <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'ml-1 mt-1 btn btn-sm btn-danger' %>
+        </li>
+      </ul>
     <% else %>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">

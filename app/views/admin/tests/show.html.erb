@@ -4,9 +4,9 @@
   </div>
   <div class="card-body">
     <h4>Уровень: <%= @test.level %></h4>
-    <h4>Автор: <%= @test.author.name %></h4>
-    <%= link_to 'Edit  ', edit_test_path(@test), class: 'btn btn-sm btn-warning' %>
-    <%= link_to 'Destroy', @test, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+    <h4>Категория: <%= @test.category.title %></h4>
+    <%= link_to 'Edit  ', edit_admin_test_path(@test), class: 'btn btn-sm btn-warning' %>
+    <%= link_to 'Destroy', admin_test_path(@test), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
     <br>
     <br>
     <table class="table">
@@ -22,8 +22,7 @@
     </table>
   </div>
   <div class="card-footer">
-    <%= link_to 'Новый вопрос', new_test_question_path(@test) %> |
-    <%= link_to 'Назад', tests_path %>
+    <%= link_to 'Новый вопрос', new_admin_test_path, class: 'btn btn-sm btn-primary' %>
+    <%= link_to 'Назад', admin_tests_path, class: 'btn btn-sm btn-secondary' %>
   </div>
-
 </div>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users, path: :gurus, path_names: {sign_in: :login, sign_out: :logout}
+  devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
 
   root to: 'tests#index'
 
@@ -20,8 +20,17 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :tests
-    resources :questions
-    resources :answers
+    # root to: 'admin/tests#index'
+    resources :tests do
+      resources :questions, shallow: true, except: :index   do
+        resources :answers, shallow: true, except: :index
+      end
+    end
   end
+
+  # TODO
+  # authenticated :admin do
+  #   root to: 'admin/tests#index', as: :authenticated_root
+  # end
+
 end

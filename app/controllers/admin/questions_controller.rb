@@ -1,4 +1,4 @@
-class QuestionsController < ApplicationController
+class Admin::QuestionsController < BaseController
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
   before_action :set_question, only: %i[show edit update destroy]
   before_action :set_test, only: %i[create new]
