@@ -1,4 +1,4 @@
-<%= form_with(model: [@test, @question], local: true) do |form| %>
+<%= form_with(model: [:admin, @test, @question], local: true) do |form| %>
   <%= render 'shared/error', resource: @question %>
 
   <div>
@@ -6,6 +6,7 @@
     <%= form.text_field :body, placeholder: 'Заполните ...', class: 'form-control' %>
   </div>
   <div>
+    <br>
     <%= form.submit class: "actions btn btn-primary" %>
   </div>
 <% end %>

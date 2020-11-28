@@ -3,10 +3,9 @@
     <%= question_header(@question) %>
   </div>
   <div class="card-body">
-    <%= render 'form', question: @question %>
+    <%= render 'form' %>
   </div>
   <div class="card-footer">
-    <%= link_to 'Показать', question_path(@question) %> |
-    <%= link_to 'Назад к вопросам', test_questions_path(@question.test_id) %>
+    <%= link_to 'Назад к вопросам', admin_test_path(@question.test_id), class: 'btn btn-sm btn-secondary' %>
   </div>
 </div>

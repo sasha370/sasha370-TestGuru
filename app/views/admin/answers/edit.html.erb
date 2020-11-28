@@ -6,7 +6,6 @@
     <%= render 'form', answer: @answer %>
   </div>
   <div class="card-footer">
-    <%= link_to 'Показать', @answer %> |
-    <%= link_to 'Назад к вопросу', question_path(@answer.question) %>
+    <%= link_to 'Назад к вопросу', admin_question_path(@answer.question), class: 'btn btn-sm btn-secondary' %>
   </div>
 </div>

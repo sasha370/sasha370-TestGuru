@@ -20,9 +20,9 @@
       <%= render @questions %>
       </tbody>
     </table>
+    <%= link_to 'Новый вопрос', new_admin_test_question_path(@test), class: 'btn btn-sm btn-primary' %>
   </div>
   <div class="card-footer">
-    <%= link_to 'Новый вопрос', new_admin_test_path, class: 'btn btn-sm btn-primary' %>
     <%= link_to 'Назад', admin_tests_path, class: 'btn btn-sm btn-secondary' %>
   </div>
 </div>

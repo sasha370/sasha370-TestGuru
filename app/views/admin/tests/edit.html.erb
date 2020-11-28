@@ -3,9 +3,9 @@
     <h2><%= @test.title %></h2>
   </div>
   <div class="card-body">
-    <%= render 'form', question: @test %>
+    <%= render 'form' %>
   </div>
   <div class="card-footer">
-    <%= link_to 'Назад к тесту',  admin_test_path(@test), class: 'btn btn-sm btn-secondary' %>
+    <%= link_to 'Назад к тесту', admin_test_path(@test), class: 'btn btn-sm btn-secondary' %>
   </div>
 </div>
