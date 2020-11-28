@@ -6,7 +6,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <% if current_user %>
-      <% if current_user.is_a?(Admin) %>
+      <% if current_user.admin? %>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <%= link_to 'Тесты', admin_tests_path, class: 'nav-link' %>

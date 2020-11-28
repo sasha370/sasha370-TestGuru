@@ -26,7 +26,6 @@ class Admin::TestsController < Admin::BaseController
     @questions = @test.questions
   end
 
-  # Todo  Может ли Админ прохордить тесты?
   def start
     current_user.tests.push(@test)
     redirect_to current_user.test_passage(@test)
