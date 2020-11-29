@@ -21,6 +21,8 @@ ru:
       test:
         create: 'Создать тест'
         update: 'Обновтиь тест'
+    select:
+      prompt: "Please select"
     label:
       test:
         title: "Название"

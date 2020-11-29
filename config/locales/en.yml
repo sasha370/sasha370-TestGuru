@@ -19,6 +19,8 @@ en:
       test:
         create: 'Create test'
         update: 'Update test'
+    select:
+      prompt: "Please select"
     label:
       test:
         title: "Title"
