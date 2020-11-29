@@ -7,7 +7,7 @@ class Answer < ApplicationRecord
   scope :correct_answers_scope, -> { where(correct: true) }
 
   def max_question_count
-    errors.add(:base, 'You can`t create more that 4 answer for question') if question.answers.count >= 4
+    errors.add(:base, I18n.t('.cant_create_more_answer')) if question.answers.count >= 4
   end
 
 end

@@ -34,4 +34,6 @@ ru:
   edit_question: "Редактировать вопрос для теста %{test}"
   create_new_answer: "Создать ответ для вопроса %{question}"
   edit_answer: "Редактировать ответ для вопроса %{question}"
+  uniq_title_level: "сочетание названия и уровня должно быть уникальным"
+  cant_create_more_answer: "Вы не можете создать больше 4-х ответов на вопрос"
 

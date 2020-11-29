@@ -32,5 +32,7 @@ en:
   edit_question: "Edit question for test %{test}"
   create_new_answer: "Create new answer for question %{question}"
   edit_answer: "Edit answer for question %{question}"
+  uniq_title_level: "should have uniq name and level"
+  cant_create_more_answer: "You can`t create more that 4 answer for question"
 
 

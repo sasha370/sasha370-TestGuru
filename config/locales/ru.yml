@@ -14,7 +14,6 @@ ru:
       header: "Вы проходите тест: %{test}"
       question_order: "Вопрос %{current} из %{total}"
 
-
   helpers:
     submit:
       create: "Создать %{model}"
@@ -29,7 +28,6 @@ ru:
       destroy: "Удалить"
       show: "Показать"
       delete: "Удалить"
-
     buttons:
       start: "Начать"
       next: "Далее"
@@ -50,7 +48,6 @@ ru:
       answer:
         body: "Текст ответа"
         correct: "Правильный?"
-
 
   admin:
     tests:

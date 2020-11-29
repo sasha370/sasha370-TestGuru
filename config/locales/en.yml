@@ -14,7 +14,6 @@ en:
       header: "You doing %{test} test"
       question_order: "Question %{current} of %{total}"
 
-
   helpers:
     submit:
       create: "Create %{model}"
@@ -29,7 +28,6 @@ en:
       destroy: "Destroy"
       show: "Show"
       delete: "Delete"
-
     buttons:
       start: "Start"
       next: "Next"
