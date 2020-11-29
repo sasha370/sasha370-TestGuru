@@ -38,7 +38,14 @@
       <% end %>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item ">
-          <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'ml-1 mt-1 btn btn-sm btn-danger' %>
+          <% if I18n.locale != I18n.default_locale %>
+            <%= link_to "Russian", { :lang=>'ru' }, class: 'btn btn-sm btn-warning' %>
+          <% else %>
+            <%= link_to "English", { :lang=>'en' }, class: 'btn btn-sm btn-warning' %>
+          <%end%>
+        </li>
+        <li class="nav-item ">
+          <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'ml-2 btn btn-sm btn-danger' %>
         </li>
       </ul>
     <% else %>
