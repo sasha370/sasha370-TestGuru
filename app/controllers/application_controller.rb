@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   def default_url_options
-    { lang: I18n.locale }
+      { lang: I18n.locale } if params[:lang] != I18n.default_locale
   end
 
   def after_sign_in_path_for(user)
