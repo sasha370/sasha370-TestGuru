@@ -5,33 +5,49 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <% if logged_in? %>
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <%= link_to 'Тесты', tests_path, class: 'nav-link' %>
-        </li>
-      </ul>
+    <% if current_user %>
+      <% if current_user.admin? %>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to 'Тесты', admin_tests_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'Создать тест', new_admin_test_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item active">
+            <!--            TODO -->
+            <%= link_to 'Пользователи', '#', class: 'nav-link' %>
+          </li>
+        </ul>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <span class="navbar-text"> <b>Амин-панель: <%= current_user.first_name %> <%= current_user.last_name %> </b></span>
+          </li>
+        </ul>
+      <% else %>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to 'Тесты', tests_path, class: 'nav-link' %>
+          </li>
+        </ul>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active">
+            <%= link_to "Добро пожаловать, #{current_user.email}", root_path, class: 'nav-link' %>
+          </li>
+        </ul>
+      <% end %>
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item ml-auto">
-          <%= link_to "Добро пожаловать, #{current_user.name}", root_path, class: 'nav-link' %>
-        </li>
-      </ul>
-      <ul class="navbar-nav ml-auto">
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Поиск" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
-        </form>
-        <li class="nav-item">
-          <%= link_to 'Выйти', logout_path, class: 'ml-1 mt-1 btn btn-sm btn-danger' %>
+        <li class="nav-item ">
+          <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'ml-1 mt-1 btn btn-sm btn-danger' %>
         </li>
       </ul>
     <% else %>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <%= link_to 'Вход', login_path, class: 'nav-link' %>
+          <%= link_to 'Вход', new_user_session_path, class: 'nav-link' %>
         </li>
         <li class="nav-item active">
-          <%= link_to 'Регистрация', users_new_path, class: 'nav-link' %>
+          <%= link_to 'Регистрация', new_user_registration_path, class: 'nav-link' %>
         </li>
       </ul>
     <% end %>

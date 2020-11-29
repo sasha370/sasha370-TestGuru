@@ -1,6 +1,10 @@
-users = User.create!([
-                         { name: Faker::Name.name, password: '123456', email: Faker::Internet.email },
-                         { name: Faker::Name.name, password: '123456', email: Faker::Internet.email }
+user = User.create!([
+                        {  password: '123456', email: 'test@test.ru', confirmed_at: Date.today }
+                    ])
+
+
+admin = Admin.create!([
+                         { first_name: 'admin', last_name: 'admin' , password: '123456', email: 'admin@admin.ru', confirmed_at: Date.today }
                      ])
 
 categories = Category.create!([
@@ -10,10 +14,10 @@ categories = Category.create!([
                               ])
 
 tests = Test.create!([
-                         { title: "Ruby start", level: 1, category_id: categories[0].id,author: users[0]},
-                         { title: "RoR start", level: 2, category_id: categories[0].id,author: users[0] },
-                         { title: "HTML base", level: 1, category_id: categories[1].id,author: users[0] },
-                         { title: "CSS base", level: 1, category_id: categories[2].id,author: users[0] }
+                         { title: "Ruby start", level: 1, category_id: categories[0].id,author: admin[0]},
+                         { title: "RoR start", level: 2, category_id: categories[0].id,author: admin[0] },
+                         { title: "HTML base", level: 1, category_id: categories[1].id,author: admin[0] },
+                         { title: "CSS base", level: 1, category_id: categories[2].id,author: admin[0] }
                      ])
 
 questions = Question.create!([
