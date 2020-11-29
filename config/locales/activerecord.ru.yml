@@ -8,7 +8,7 @@ ru:
       question: "Вопрос"
       answer: "Ответ"
 
-    atributes:
+    attributes:
       test:
         title: "Название"
         level: "Уровень"
@@ -36,4 +36,5 @@ ru:
   edit_answer: "Редактировать ответ для вопроса %{question}"
   uniq_title_level: "сочетание названия и уровня должно быть уникальным"
   cant_create_more_answer: "Вы не можете создать больше 4-х ответов на вопрос"
+
 

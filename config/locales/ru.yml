@@ -67,7 +67,16 @@ ru:
       new:
         header: "Новый тест"
     questions:
-      show:
+      create:
+        success: "Вопрос был успешно создан!"
+      update:
+        success: "Вопрос был успешно обновлен!"
+      destroy:
+        success: "Вопрос был успешно удален!"
+      test_not_found: "Тест не найден"
+    base:
+      admin_required!:
+        must_be_an_admin: "Только админ имеет доступ к данным ресурсам!!!"
 
   tests_mailer:
     complited_test:

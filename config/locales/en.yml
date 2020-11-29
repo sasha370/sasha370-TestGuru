@@ -67,7 +67,16 @@ en:
       new:
         header: "New test"
     questions:
-      show:
+      create:
+        success: 'Question was successfully created.'
+      update:
+        success: "Question was successfully updated."
+      destroy:
+        success: "Question was successfully destroyed."
+      test_not_found: "Test was not found"
+    base:
+      admin_required!:
+        must_be_an_admin: "You must be an admin to see that!!!"
 
   tests_mailer:
     complited_test:
