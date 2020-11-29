@@ -10,8 +10,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'devise-bootstrap-views'
-
-
+gem 'rails-i18n'
+gem 'devise-i18n'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do

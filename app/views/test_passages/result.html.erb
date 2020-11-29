@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <h1> Тест <%= @test_passage.test.title %> завершен! </h1>
+  <h1> <%= t('.header', title: @test_passage.test.title ) %> </h1>
   <% if @test_passage.success? %>
     <h2> Поздравляю! Вы прошли тест, т.к. ответили на
       <span class="text-success"> <%= @test_passage.correct_answers_in_percent %>% </span> вопросов правильно </h2>

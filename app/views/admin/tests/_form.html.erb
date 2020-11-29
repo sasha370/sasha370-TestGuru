@@ -2,16 +2,16 @@
   <%= render 'shared/error', resource: @test %>
 
   <div>
-    <%= form.label :title, 'Название теста' %>
+    <%= form.label :title%>
     <%= form.text_field :title, class: 'form-control' %>
   </div>
   <div>
-    <%= form.label :level, 'Уровень теста' %>
+    <%= form.label :level%>
     <%= form.number_field :level, placeholder: 'От 0 до 10', class: 'form-control' %>
   </div>
   <div>
     <br>
-    <%= form.label :category_id, 'Категория теста: ' %>
+    <%= form.label :category_id %>
     <%= form.collection_select :category_id, Category.order(:title), :id, :title %>
   </div>
   <div>
