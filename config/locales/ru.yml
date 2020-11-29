@@ -1,20 +1,19 @@
 ru:
-  hello: 'Привет мир'
   tests:
     index:
       header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      category: "Категория"
+      questions: "Вопросы"
+      start: "Начать"
+    test:
+      start: "Начать"
+      question_count: "Кол-во вопросов: %{count}"
 
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
-
-  shared:
-    error:
-      header:
-          few: "Обнаружено %{count} ошибки"
-          many: "Обнаружено %{count} ошибок"
-          one: "Обнаружено %{count} ошибка"
-          other: "Обнаружено %{count} ошибки"
 
   helpers:
     submit:
@@ -48,3 +47,10 @@ ru:
       subject: 'Вы закончили текст на сайте TestGuru!'
 
 
+  shared:
+    error:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
