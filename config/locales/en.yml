@@ -13,13 +13,17 @@ en:
 
   test_passages:
     result:
-      header: "Test %{title} successfully completed!"
+      header: "Test %{title} completed!"
+      pass_test: "Congratulations! You passed the test because answered %{percent} questions correct"
+      lose_test: "You did not pass the test because answered correctly in all %{percent} questions"
+    show:
+      header: "You doing %{test} test"
+      question_order: "Question %{current} of %{total}"
+      next: "Next"
 
   helpers:
     submit:
-      test:
-        create: 'Create test'
-        update: 'Update test'
+
     select:
       prompt: "Please select"
     label:

@@ -13,13 +13,17 @@ ru:
 
   test_passages:
     result:
-      header: "Тест %{title} успешно завершен!"
+      header: "Тест %{title} завершен!"
+      pass_test: "Поздравляю! Вы прошли тест, т.к. ответили на %{percent} вопросов правильно"
+      lose_test: "Вы не прошли тест, т.к. ответили правильно всего на %{percent} вопросов"
+    show:
+      header: "Вы проходите тест: %{test}"
+      question_order: "Вопрос %{current} из %{total}"
+      next: "Далее"
 
   helpers:
     submit:
-      test:
-        create: 'Создать тест'
-        update: 'Обновтиь тест'
+
     select:
       prompt: "Please select"
     label:
