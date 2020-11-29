@@ -58,3 +58,14 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружено %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    navbar:
+      tests: "Тесты"
+      create_test: "Создать тест"
+      users: "Пользователи"
+      admin_panel: "Админ-панель для: %{first_name} %{last_name}"
+      welcome: "Добро пожаловать #{user}"
+      log_out: "Выйти"
+      log_in: "Войти"
+      sign_up: "Зарегистрироваться"
+    footer:
+      link_to_partner: "Учебный проект в онлайн-школе %{partner}"

@@ -29,3 +29,5 @@ ru:
       messages:
         blank: "не может быть пустым!"
 
+    devise:
+

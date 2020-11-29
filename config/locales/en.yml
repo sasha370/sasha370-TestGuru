@@ -55,3 +55,14 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    navbar:
+      tests: "Tests"
+      create_test: "Create test"
+      users: "Users"
+      admin_panel: "Admin-panel for: %{first_name} %{last_name}"
+      welcome: "Welcome: %{user}"
+      log_out: "Logout"
+      log_in: "Log in"
+      sign_up: "Sign up"
+    footer:
+      link_to_partner: "Educational project at %{partner} university"
