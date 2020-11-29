@@ -3,7 +3,7 @@
     <h3><%= t('.header', title: @test.title) %></h3>
   </div>
   <div class="card-body">
-    <h4><%= t('activerecord.atributes.test.level') %>: <%= @test.level %></h4>
+    <h4><%= t('activerecord.attributes.test.level') %>: <%= @test.level %></h4>
     <h4><%= t('activerecord.models.category') %>: <%= @test.category.title %> </h4>
     <%= link_to t('helpers.links.edit'), edit_admin_test_path(@test), class: 'btn btn-sm btn-warning' %>
     <%= link_to t('helpers.links.destroy'), admin_test_path(@test), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>

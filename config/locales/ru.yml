@@ -77,6 +77,13 @@ ru:
     base:
       admin_required!:
         must_be_an_admin: "Только админ имеет доступ к данным ресурсам!!!"
+    answers:
+      create:
+        success: "Ответ был успешно создан."
+      update:
+        success: "Ответ был успешно обновлен."
+      destroy:
+        success: "Ответ был успешно удален."
 
   tests_mailer:
     complited_test:

@@ -77,6 +77,13 @@ en:
     base:
       admin_required!:
         must_be_an_admin: "You must be an admin to see that!!!"
+    answers:
+      create:
+        success: "Answer was successfully created."
+      update:
+        success: "Answer was successfully updated."
+      destroy:
+        success: "Answer was successfully destroyed."
 
   tests_mailer:
     complited_test:
