@@ -4,16 +4,16 @@
   <thead class="bg-primary text-light">
   <tr>
     <th scope="col">#</th>
-    <th scope="col">Название</th>
-    <th scope="col">Уровень</th>
-    <th scope="col">Категория</th>
-    <th scope="col">Вопросы</th>
-    <th colspan="3" class="text-center">Действия</th>
-    <th scope="col">Пуск</th>
+    <th scope="col"><%= t('activerecord.atributes.test.title') %></th>
+    <th scope="col"><%= t('activerecord.atributes.test.level') %></th>
+    <th scope="col"><%= t('helpers.table_col.category') %></th>
+    <th scope="col"><%= t('helpers.table_col.questions') %></th>
+    <th colspan="3" class="text-center"><%= t('helpers.table_col.action') %></th>
+    <th scope="col"><%= t('helpers.buttons.start') %></th>
   </tr>
   </thead>
   <tbody>
   <%= render @tests %>
   </tbody>
 </table>
-<%= link_to "Создать тест", new_admin_test_path, class: 'btn btn-sm btn-primary' %>
+<%= link_to t('helpers.submit.create', model: t('activerecord.models.test')), new_admin_test_path, class: 'btn btn-sm btn-primary' %>

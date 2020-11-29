@@ -10,9 +10,9 @@ module AnswersHelper
 
   def answer_header(answer)
     if answer.new_record?
-      "<h2>Создать новый ответ для вопроса #{@question.body}</h2>".html_safe
+      I18n.t('.create_new_answer', question: @question.body )
     else
-      "<h2>Редактировать ответ для вопроса #{answer.question.body}</h2>".html_safe
+      I18n.t('.edit_answer', question: answer.question.body )
     end
   end
 end

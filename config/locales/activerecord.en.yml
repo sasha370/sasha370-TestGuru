@@ -28,5 +28,9 @@ en:
     errors:
       messages:
         blank: "can`t be blank!"
+  create_new_question: "Create new question for test %{test}"
+  edit_question: "Edit question for test %{test}"
+  create_new_answer: "Create new answer for question %{question}"
+  edit_answer: "Edit answer for question %{question}"
 
 

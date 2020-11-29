@@ -2,13 +2,7 @@ en:
   tests:
     index:
       header: "Tricky tests"
-      title: "Title"
-      level: "Level"
-      category: "Category"
-      questions: "Questions"
-      start: "Start"
     test:
-      start: "Start"
       question_count: "Questions: %{count}"
 
   test_passages:
@@ -19,13 +13,30 @@ en:
     show:
       header: "You doing %{test} test"
       question_order: "Question %{current} of %{total}"
-      next: "Next"
+
 
   helpers:
     submit:
+      create: "Create %{model}"
+      update: "Update %{model}"
+    table_col:
+      action: "Action"
+      questions: "Questions"
+      answers: "Answers"
+      category: "Category"
+    links:
+      edit: "Edit"
+      destroy: "Destroy"
+      show: "Show"
+      delete: "Delete"
 
+    buttons:
+      start: "Start"
+      next: "Next"
     select:
       prompt: "Please select"
+    navigation:
+      back: "Back"
     label:
       test:
         title: "Title"
@@ -34,6 +45,11 @@ en:
       user:
         first_name: "First name"
         last_name: "Last name"
+      question:
+        body: "Question body"
+      answer:
+        body: "Answer body"
+        correct: "Correct?"
 
   admin:
     tests:
@@ -45,6 +61,15 @@ en:
         success: 'Test was successfully updated!'
       destroy:
         success: 'Test was successfully destroyed!'
+      show:
+        header: "Test: %{title}"
+        new_question: "New question"
+      test:
+        question_count: "Questions: %{count}"
+      new:
+        header: "New test"
+    questions:
+      show:
 
   tests_mailer:
     complited_test:

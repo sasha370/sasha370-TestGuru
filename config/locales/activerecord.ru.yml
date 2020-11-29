@@ -30,4 +30,8 @@ ru:
         blank: "не может быть пустым!"
 
     devise:
+  create_new_question: "Создать новый вопрос для теста %{test}"
+  edit_question: "Редактировать вопрос для теста %{test}"
+  create_new_answer: "Создать ответ для вопроса %{question}"
+  edit_answer: "Редактировать ответ для вопроса %{question}"
 

@@ -21,7 +21,7 @@
         </ul>
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active">
-            <span class="navbar-text"> <b> <%= t('.admin_panel', first_name: current_user.first_name , last_name: current_user.last_name) %>  </b></span>
+            <span class="navbar-text"> <b> <%= t('.admin_panel', first_name: current_user.first_name, last_name: current_user.last_name) %>  </b></span>
           </li>
         </ul>
       <% else %>
@@ -32,7 +32,7 @@
         </ul>
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active">
-            <%= link_to t('.welcome', user: current_user.email ), root_path, class: 'nav-link' %>
+            <%= link_to t('.welcome', user: current_user.email), root_path, class: 'nav-link' %>
           </li>
         </ul>
       <% end %>
