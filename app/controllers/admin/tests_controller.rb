@@ -8,15 +8,14 @@ class Admin::TestsController < Admin::BaseController
 
   def new
     @test = Test.new
-    p @test
   end
 
   def edit
   end
 
   def update
-        if @test.update(tests_params)
-      redirect_to admin_test_path(@test) , notice: 'Тест успешно обновлен!'
+    if @test.update(tests_params)
+      redirect_to admin_test_path(@test), notice: 'Тест успешно обновлен!'
     else
       render :edit
     end
@@ -32,10 +31,9 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def create
-    @test = Test.new(tests_params)
-    @test.author = current_user
+    @test = current_user.created_tests.new(tests_params)
     if @test.save
-      redirect_to admin_test_path(@test) , notice: 'Тест успешно создан!'
+      redirect_to admin_test_path(@test), notice: 'Тест успешно создан!'
     else
       render :new
     end
