@@ -108,3 +108,4 @@ ru:
       sign_up: "Зарегистрироваться"
     footer:
       link_to_partner: "Учебный проект в онлайн-школе %{partner}"
+  hello: "Добрый день, %{user}!"

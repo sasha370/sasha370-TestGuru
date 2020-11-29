@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(user)
-    flash[:notice] = "Hello, #{user.first_name}!"
+    flash[:notice] = I18n.t('.hello', user: user.first_name)
     user.admin? ? admin_tests_path : root_path
   end
 

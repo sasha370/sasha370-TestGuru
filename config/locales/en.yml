@@ -105,3 +105,4 @@ en:
       sign_up: "Sign up"
     footer:
       link_to_partner: "Educational project at %{partner} university"
+  hello: "Hello %{user}!"
