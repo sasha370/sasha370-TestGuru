@@ -89,6 +89,8 @@ en:
     gists:
       index:
         header: "Created Gist`s"
+      destroy:
+        success: "Gist was successfully destroyed!"
 
   tests_mailer:
     complited_test:
@@ -119,5 +121,6 @@ en:
     make_gist_record:
       success: "Gist was successfully created"
       failure: "An error occurred while saving gist"
+    server_error: "Error connecting to GitHub server"
     success: "Gist was successfully created"
     failure: "An error occurred while saving gist"

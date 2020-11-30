@@ -5,7 +5,7 @@
   <tr>
     <th scope="col">#</th>
     <th scope="col"><%= t('activerecord.models.question') %></th>
-    <th scope="col">URL </th>
+    <th scope="col">URL</th>
     <th scope="col"><%= t('activerecord.models.user') %></th>
     <th scope="col"><%= t('helpers.table_col.action') %></th>
   </tr>
@@ -14,3 +14,4 @@
   <%= render @gists %>
   </tbody>
 </table>
+<%= link_to t('helpers.navigation.back'), admin_tests_path, class: 'btn btn-sm btn-secondary' %>

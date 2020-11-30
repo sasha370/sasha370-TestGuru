@@ -89,6 +89,8 @@ ru:
     gists:
       index:
         header: "Перечень созданных Gist"
+      destroy:
+        success: "Gist был успешно удален"
 
   tests_mailer:
     complited_test:
@@ -122,6 +124,7 @@ ru:
     make_gist_record:
       success: "Gist успешно сохранен"
       failure: "Во время сохранения произошла ошибка"
+    server_error: "Ошибка соединения с сервером GitHub"
     success: "Gist успешно сохранен"
     failure: "Во время сохранения произошла ошибка"
 

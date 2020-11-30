@@ -5,19 +5,14 @@ class Admin::GistsController < Admin::BaseController
   end
 
   def destroy
-    #TODO
-    # GistRestService.new(@gist).delete
-  end
-
-  private
-
-  def find_gist
-    @gist = Gist.find_by(user_id: current_user, question_id: @question) || nil
-  end
-
-
-  def gist_params
-    params.require(:gist).permit[:id]
+    gist = Gist.find(params[:id])
+    gist.destroy
+    begin
+      GistRestService.new(gist).delete
+      redirect_to admin_gists_path, notice: t('.success')
+    rescue
+      flash[:alert] = t('gists.server_error')
+    end
   end
 
 end

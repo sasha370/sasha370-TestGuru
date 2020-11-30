@@ -10,9 +10,9 @@ module AnswersHelper
 
   def answer_header(answer)
     if answer.new_record?
-      I18n.t('.create_new_answer', question: @question.body )
+      I18n.t('.create_new_answer', question: @question.body)
     else
-      I18n.t('.edit_answer', question: answer.question.body )
+      I18n.t('.edit_answer', question: answer.question.body)
     end
   end
 end

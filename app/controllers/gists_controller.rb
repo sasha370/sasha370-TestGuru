@@ -3,26 +3,34 @@ class GistsController < ApplicationController
   before_action :find_gist, only: %i[create make_gist_record]
 
   def create
-    if @gist
-      if gist_exist_in_github?
-        flash[:alert] = t('gists.create.gist_already_exist')
+    begin
+      if @gist
+        if gist_exist_in_github?
+          flash[:alert] = t('gists.create.gist_already_exist')
+        else
+          @gist.destroy
+          make_gist_record
+        end
       else
-        @gist.destroy
         make_gist_record
       end
-    else
-      make_gist_record
+      redirect_to @test_passage
+    rescue
+      flash[:alert] = t('.server_error')
     end
-    redirect_to @test_passage
   end
 
   def make_gist_record
-    resource = create_gist_on_github(@question)
-    if resource
-      create_gist_in_db(resource)
-      flash[:notice] = t('.success')
-    else
-      flash[:alert] = t('.failure')
+    begin
+      resource = create_gist_on_github(@question)
+      if resource.any?
+        create_gist_in_db(resource)
+        flash[:notice] = t('.success')
+      else
+        flash[:alert] = t('.failure')
+      end
+    rescue
+      flash[:alert] = t('.server_error')
     end
   end
 
@@ -30,15 +38,10 @@ class GistsController < ApplicationController
     @gists = Gist.all
   end
 
-  def destroy
-    #TODO
-    # GistRestService.new(@gist).delete
-  end
-
   private
 
   def find_gist
-    @gist = Gist.find_by(user_id: current_user, question_id: @question) || nil
+    @gist = Gist.find_by(user_id: current_user, question_id: @question)
   end
 
   def create_gist_in_db(resource)
@@ -65,7 +68,7 @@ class GistsController < ApplicationController
   end
 
   def gist_params
-    params.require(:gist).permit[:id]
+    params.require(:gist).permit(:id)
   end
 
 end
