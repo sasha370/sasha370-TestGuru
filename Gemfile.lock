@@ -84,6 +84,10 @@ GEM
     devise-bootstrap-views (1.1.0)
     devise-i18n (1.9.2)
       devise (>= 4.7.1)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     faker (2.14.0)
       i18n (>= 1.6, < 2)
@@ -241,6 +245,7 @@ DEPENDENCIES
   devise
   devise-bootstrap-views
   devise-i18n
+  dotenv-rails
   faker
   faraday
   jbuilder (~> 2.7)
