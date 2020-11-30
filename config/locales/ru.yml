@@ -13,6 +13,10 @@ ru:
     show:
       header: "Вы проходите тест: %{test}"
       question_order: "Вопрос %{current} из %{total}"
+      gist_question: "Сохранить в Gist"
+    gist:
+      success: "Gist успешно сохранен"
+      failure: "Во время сохранения произошла ошибка"
 
   helpers:
     submit:
@@ -110,3 +114,4 @@ ru:
     footer:
       link_to_partner: "Учебный проект в онлайн-школе %{partner}"
   hello: "Добрый день, %{user}!"
+  header: "Вопрос из теста %{title} с сайта TestGuru"

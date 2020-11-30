@@ -13,6 +13,10 @@ en:
     show:
       header: "You doing %{test} test"
       question_order: "Question %{current} of %{total}"
+      gist_question: "Save in Gist"
+    gist:
+      success: "Gist was successfully created"
+      failure: "An error occurred while saving gist"
 
   helpers:
     submit:
@@ -107,3 +111,4 @@ en:
     footer:
       link_to_partner: "Educational project at %{partner} university"
   hello: "Hello %{user}!"
+  header: "A question about %{title} from TestGuru"

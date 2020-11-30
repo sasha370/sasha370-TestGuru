@@ -19,9 +19,8 @@
           <%= b.label %>
         </p>
       <% end %>
-      <p>
-        <%= form.submit t('helpers.buttons.next'), class: 'btn btn-sm btn-success' %>
-      </p>
+      <p><%= link_to t('.gist_question'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-sm btn-outline-info' %></p>
+      <p><%= form.submit t('helpers.buttons.next'), class: 'btn btn-sm btn-success' %></p>
     <% end %>
   </div>
 </div>
