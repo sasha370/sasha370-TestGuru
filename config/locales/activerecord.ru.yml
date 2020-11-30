@@ -1,0 +1,40 @@
+ru:
+  activerecord:
+    models:
+      test: "Тест"
+      user: "Пользователь"
+      test_passage: "Прохождение"
+      category: "Категория"
+      question: "Вопрос"
+      answer: "Ответ"
+
+    attributes:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+        user_id: "Автор"
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+        type: "Тип"
+      question:
+        body: "Содержание"
+      category:
+        title: "Название"
+      answer:
+        body: "Вариант ответа"
+
+    errors:
+      messages:
+        blank: "не может быть пустым!"
+
+    devise:
+  create_new_question: "Создать новый вопрос для теста %{test}"
+  edit_question: "Редактировать вопрос для теста %{test}"
+  create_new_answer: "Создать ответ для вопроса %{question}"
+  edit_answer: "Редактировать ответ для вопроса %{question}"
+  uniq_title_level: "сочетание названия и уровня должно быть уникальным"
+  cant_create_more_answer: "Вы не можете создать больше 4-х ответов на вопрос"
+
+

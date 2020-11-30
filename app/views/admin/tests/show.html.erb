@@ -1,28 +1,28 @@
 <div class="card">
   <div class="card-header">
-    <h3>Тест: <%= @test.title %></h3>
+    <h3><%= t('.header', title: @test.title) %></h3>
   </div>
   <div class="card-body">
-    <h4>Уровень: <%= @test.level %></h4>
-    <h4>Категория: <%= @test.category.title %></h4>
-    <%= link_to 'Edit  ', edit_admin_test_path(@test), class: 'btn btn-sm btn-warning' %>
-    <%= link_to 'Destroy', admin_test_path(@test), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+    <h4><%= t('activerecord.attributes.test.level') %>: <%= @test.level %></h4>
+    <h4><%= t('activerecord.models.category') %>: <%= @test.category.title %> </h4>
+    <%= link_to t('helpers.links.edit'), edit_admin_test_path(@test), class: 'btn btn-sm btn-warning' %>
+    <%= link_to t('helpers.links.destroy'), admin_test_path(@test), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
     <br>
     <br>
     <table class="table">
       <thead class="bg-primary text-light">
       <tr>
-        <th scope="col">Вопросы</th>
-        <th colspan="3" class=" text-center">Действия</th>
+        <th scope="col"><%= t('helpers.table_col.questions') %></th>
+        <th colspan="3" class=" text-center"><%= t('helpers.table_col.action') %></th>
       </tr>
       </thead>
       <tbody>
       <%= render @questions %>
       </tbody>
     </table>
-    <%= link_to 'Новый вопрос', new_admin_test_question_path(@test), class: 'btn btn-sm btn-primary' %>
+    <%= link_to t('.new_question'), new_admin_test_question_path(@test), class: 'btn btn-sm btn-primary' %>
   </div>
   <div class="card-footer">
-    <%= link_to 'Назад', admin_tests_path, class: 'btn btn-sm btn-secondary' %>
+    <%= link_to t('helpers.navigation.back'), admin_tests_path, class: 'btn btn-sm btn-secondary' %>
   </div>
 </div>

@@ -3,6 +3,6 @@
   <td><%= test.title %></td>
   <td><%= test.level %></td>
   <td><%= test.category.title %></td>
-  <td><%= "Кол-во вопросов: #{test.questions.count}" %></td>
-  <td><%= button_to "Начать", start_test_path(test), class: 'btn btn-sm btn-success' %></td>
+  <td><%= t('.question_count', count: test.questions.count) %></td>
+  <td><%= button_to t('helpers.buttons.start'), start_test_path(test), class: 'btn btn-sm btn-success' %></td>
 </tr>

@@ -1,11 +1,11 @@
 <div class="card">
   <div class="card-header">
-    <%= answer_header(@answer) %>
+    <h2><%= answer_header(@answer) %></h2>
   </div>
   <div class="card-body">
     <%= render 'form', answer: @answer %>
   </div>
   <div class="card-footer">
-    <%= link_to 'Назад к вопросу', admin_question_path(@question), class: 'btn btn-sm btn-secondary' %>
+    <%= link_to t('helpers.navigation.back'), admin_question_path(@question), class: 'btn btn-sm btn-secondary' %>
   </div>
 </div>

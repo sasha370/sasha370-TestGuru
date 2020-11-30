@@ -1,11 +1,11 @@
 <div class="card">
   <div class="card-header">
-    Новый Тест
+    <h2> <%= t('.header') %></h2>
   </div>
   <div class="card-body">
     <%= render 'form' %>
   </div>
   <div class="card-footer">
-    <%= link_to 'Назад к тестам', admin_tests_path %>
+    <%= link_to t('helpers.navigation.back'), admin_tests_path %>
   </div>
 </div>

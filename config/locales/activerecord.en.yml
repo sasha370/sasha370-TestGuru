@@ -1,0 +1,39 @@
+en:
+  activerecord:
+    models:
+      test: "Test"
+      user: "User"
+      test_passage: "Passage"
+      category: "Category"
+      question: "Question"
+      answer: "Answer"
+
+    attributes:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+        user_id: "Author"
+      user:
+        first_name: "First name"
+        last_name: "Last name"
+        type: "Type"
+      question:
+        body: "Body"
+      category:
+        title: "Title"
+      answer:
+        body: "Body"
+
+    errors:
+      messages:
+        blank: "can`t be blank!"
+  create_new_question: "Create new question for test %{test}"
+  edit_question: "Edit question for test %{test}"
+  create_new_answer: "Create new answer for question %{question}"
+  edit_answer: "Edit answer for question %{question}"
+  uniq_title_level: "should have uniq name and level"
+  cant_create_more_answer: "You can`t create more that 4 answer for question"
+
+
+

@@ -1,0 +1,111 @@
+ru:
+  tests:
+    index:
+      header: "Доступные тесты"
+    test:
+      question_count: "Кол-во вопросов: %{count}"
+
+  test_passages:
+    result:
+      header: "Тест %{title} завершен!"
+      pass_test: "Поздравляю! Вы прошли тест, т.к. ответили на %{percent} вопросов правильно"
+      lose_test: "Вы не прошли тест, т.к. ответили правильно всего на %{percent} вопросов"
+    show:
+      header: "Вы проходите тест: %{test}"
+      question_order: "Вопрос %{current} из %{total}"
+
+  helpers:
+    submit:
+      create: "Создать %{model}"
+      update: "Обновить %{model}"
+    table_col:
+      action: "Действия"
+      questions: "Вопросы"
+      answers: "Ответы"
+      category: "Категория"
+    links:
+      edit: "Редактировать"
+      destroy: "Удалить"
+      show: "Показать"
+      delete: "Удалить"
+    buttons:
+      start: "Начать"
+      next: "Далее"
+    select:
+      prompt: "Please select"
+    navigation:
+      back: "Назад"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+      user:
+        first_name: "Имя"
+        last_name: "Фамилия"
+      question:
+        body: "Текст вопроса"
+      answer:
+        body: "Текст ответа"
+        correct: "Правильный?"
+
+  admin:
+    tests:
+      index:
+        header: "Доступные тесты"
+      create:
+        success: 'Тест успешно создан!'
+      update:
+        success: 'Тест успешно обновлен!'
+      destroy:
+        success: 'Тест был успешно удален!'
+      show:
+        header: "Тест: %{title}"
+        new_question: "Новый вопрос"
+      test:
+        question_count: "Вопросов: %{count} "
+      new:
+        header: "Новый тест"
+    questions:
+      create:
+        success: "Вопрос был успешно создан!"
+      update:
+        success: "Вопрос был успешно обновлен!"
+      destroy:
+        success: "Вопрос был успешно удален!"
+      test_not_found: "Тест не найден"
+    base:
+      admin_required!:
+        must_be_an_admin: "Только админ имеет доступ к данным ресурсам!!!"
+    answers:
+      create:
+        success: "Ответ был успешно создан."
+      update:
+        success: "Ответ был успешно обновлен."
+      destroy:
+        success: "Ответ был успешно удален."
+
+  tests_mailer:
+    complited_test:
+      subject: 'Вы закончили текст на сайте TestGuru!'
+
+
+  shared:
+    error:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+    navbar:
+      tests: "Тесты"
+      create_test: "Создать тест"
+      users: "Пользователи"
+      admin_panel: "Админ-панель для: %{first_name} %{last_name}"
+      welcome: "Добро пожаловать #{user}"
+      log_out: "Выйти"
+      log_in: "Войти"
+      sign_up: "Зарегистрироваться"
+    footer:
+      link_to_partner: "Учебный проект в онлайн-школе %{partner}"
+  hello: "Добрый день, %{user}!"

@@ -3,9 +3,9 @@
   <td><%= test.title %></td>
   <td><%= test.level %></td>
   <td><%= test.category.title %></td>
-  <td><%= "Кол-во вопросов: #{test.questions.count}" %></td>
-  <td><%= link_to "Show", admin_test_path(test) %></td>
-  <td><%= link_to "Edit", edit_admin_test_path(test) %></td>
-  <td><%= link_to "Delete", admin_test_path(test), method: :delete %></td>
-  <td><%= button_to "Начать", start_test_path(test), class: 'btn btn-sm btn-success' %></td>
+  <td><%= t('.question_count', count: test.questions.count) %></td>
+  <td><%= link_to t('helpers.links.show'), admin_test_path(test) %></td>
+  <td><%= link_to t('helpers.links.edit'), edit_admin_test_path(test) %></td>
+  <td><%= link_to t('helpers.links.delete'), admin_test_path(test), method: :delete %></td>
+  <td><%= button_to t('helpers.buttons.start'), start_test_path(test), class: 'btn btn-sm btn-success' %></td>
 </tr>
