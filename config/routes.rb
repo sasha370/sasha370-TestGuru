@@ -13,10 +13,12 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :gists, only: %i[show destroy]
+
   resources :test_passages, only: %i[show update] do
+    resource :gist, only: %i[create destroy]
     member do
       get :result # /test_passages/:id/result
-      post :gist
     end
   end
 
