@@ -3,9 +3,8 @@ class GistsController < ApplicationController
   before_action :find_gist, only: %i[create make_gist_record]
 
   def create
-    begin
       if @gist
-        if gist_exist_in_github?
+        if gist_exist_in_github?(@gist)
           flash[:alert] = t('gists.create.gist_already_exist')
         else
           @gist.destroy
@@ -15,9 +14,6 @@ class GistsController < ApplicationController
         make_gist_record
       end
       redirect_to @test_passage
-    rescue
-      flash[:alert] = t('.server_error')
-    end
   end
 
   def make_gist_record
@@ -55,8 +51,8 @@ class GistsController < ApplicationController
     GistQuestionService.new(question).call
   end
 
-  def gist_exist_in_github?
-    GistRestService.new(@gist).check
+  def gist_exist_in_github?(gist)
+    GistRestService.new(gist).check
   end
 
   def set_test_passage
