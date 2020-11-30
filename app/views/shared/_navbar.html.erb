@@ -7,6 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <% if current_user %>
       <% if current_user.admin? %>
+
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <%= link_to t('.tests'), admin_tests_path, class: 'nav-link' %>
@@ -24,6 +25,7 @@
             <span class="navbar-text"> <b> <%= t('.admin_panel', first_name: current_user.first_name, last_name: current_user.last_name) %>  </b></span>
           </li>
         </ul>
+
       <% else %>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
@@ -36,6 +38,7 @@
           </li>
         </ul>
       <% end %>
+      
       <ul class="navbar-nav ml-auto">
         <li class="nav-item ">
           <% if I18n.locale != I18n.default_locale %>
