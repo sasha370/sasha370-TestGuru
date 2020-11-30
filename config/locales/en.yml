@@ -86,6 +86,9 @@ en:
         success: "Answer was successfully updated."
       destroy:
         success: "Answer was successfully destroyed."
+    gists:
+      index:
+        header: "Created Gist`s"
 
   tests_mailer:
     complited_test:

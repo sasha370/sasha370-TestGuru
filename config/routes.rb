@@ -13,16 +13,17 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :gists, only: %i[show destroy]
+
 
   resources :test_passages, only: %i[show update] do
     resource :gist, only: %i[create destroy]
     member do
-      get :result # /test_passages/:id/result
+      get :result
     end
   end
 
   namespace :admin do
+    resources :gists, only: %i[index destroy]
     resources :tests do
       resources :questions, shallow: true, except: :index do
         resources :answers, shallow: true, except: :index

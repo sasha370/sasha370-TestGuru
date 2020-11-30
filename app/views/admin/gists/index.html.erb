@@ -1,0 +1,16 @@
+<h1 class="text-center"> <%= t('.header') %> </h1>
+
+<table class="table">
+  <thead class="bg-primary text-light">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col"><%= t('activerecord.models.question') %></th>
+    <th scope="col">URL </th>
+    <th scope="col"><%= t('activerecord.models.user') %></th>
+    <th scope="col"><%= t('helpers.table_col.action') %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render @gists %>
+  </tbody>
+</table>

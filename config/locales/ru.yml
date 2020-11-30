@@ -86,6 +86,9 @@ ru:
         success: "Ответ был успешно обновлен."
       destroy:
         success: "Ответ был успешно удален."
+    gists:
+      index:
+        header: "Перечень созданных Gist"
 
   tests_mailer:
     complited_test:

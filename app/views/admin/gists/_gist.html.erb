@@ -1,0 +1,7 @@
+<tr>
+  <td><%= gist.id %></td>
+  <td><%= link_to truncate(gist.question.body, length: 25), admin_question_path(gist.question) %></td>
+  <td><%= link_to gist_hash(gist.url), gist.url %></td>
+  <td><%= gist.user.email %></td>
+  <td><%= link_to t('helpers.links.delete'), admin_gist_path(gist), method: :delete %></td>
+</tr>
