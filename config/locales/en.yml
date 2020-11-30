@@ -96,6 +96,7 @@ en:
         other: "%{count} errors detected"
     navbar:
       tests: "Tests"
+      admin_tests: "Admin tests"
       create_test: "Create test"
       users: "Users"
       admin_panel: "Admin-panel for: %{first_name} %{last_name}"
