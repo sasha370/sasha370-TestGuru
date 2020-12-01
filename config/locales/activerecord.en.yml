@@ -7,6 +7,7 @@ en:
       category: "Category"
       question: "Question"
       answer: "Answer"
+      gist: "Gist"
 
     attributes:
       test:
@@ -24,6 +25,7 @@ en:
         title: "Title"
       answer:
         body: "Body"
+      gist:
 
     errors:
       messages:

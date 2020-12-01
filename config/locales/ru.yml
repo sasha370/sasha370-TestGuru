@@ -13,6 +13,8 @@ ru:
     show:
       header: "Вы проходите тест: %{test}"
       question_order: "Вопрос %{current} из %{total}"
+      gist_question: "Сохранить в Gist"
+
 
   helpers:
     submit:
@@ -84,6 +86,11 @@ ru:
         success: "Ответ был успешно обновлен."
       destroy:
         success: "Ответ был успешно удален."
+    gists:
+      index:
+        header: "Перечень созданных Gist"
+      destroy:
+        success: "Gist был успешно удален"
 
   tests_mailer:
     complited_test:
@@ -101,7 +108,7 @@ ru:
       tests: "Тесты"
       admin_tests: "Управление тестами"
       create_test: "Создать тест"
-      users: "Пользователи"
+      gists: "Gists"
       admin_panel: "Админ-панель для: %{first_name} %{last_name}"
       welcome: "Добро пожаловать %{user}"
       log_out: "Выйти"
@@ -110,3 +117,15 @@ ru:
     footer:
       link_to_partner: "Учебный проект в онлайн-школе %{partner}"
   hello: "Добрый день, %{user}!"
+  header: "Вопрос из теста %{title} с сайта TestGuru"
+  gists:
+    create:
+      gist_already_exist: "Данный gist уже существует!"
+    make_gist_record:
+      success: "Gist успешно сохранен"
+      failure: "Во время сохранения произошла ошибка"
+    server_error: "Ошибка соединения с сервером GitHub"
+    success: "Gist успешно сохранен"
+    failure: "Во время сохранения произошла ошибка"
+
+

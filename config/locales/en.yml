@@ -13,6 +13,8 @@ en:
     show:
       header: "You doing %{test} test"
       question_order: "Question %{current} of %{total}"
+      gist_question: "Save in Gist"
+
 
   helpers:
     submit:
@@ -84,6 +86,11 @@ en:
         success: "Answer was successfully updated."
       destroy:
         success: "Answer was successfully destroyed."
+    gists:
+      index:
+        header: "Created Gist`s"
+      destroy:
+        success: "Gist was successfully destroyed!"
 
   tests_mailer:
     complited_test:
@@ -98,7 +105,7 @@ en:
       tests: "Tests"
       admin_tests: "Admin tests"
       create_test: "Create test"
-      users: "Users"
+      gists: "Gists"
       admin_panel: "Admin-panel for: %{first_name} %{last_name}"
       welcome: "Welcome: %{user}"
       log_out: "Logout"
@@ -107,3 +114,13 @@ en:
     footer:
       link_to_partner: "Educational project at %{partner} university"
   hello: "Hello %{user}!"
+  header: "A question about %{title} from TestGuru"
+  gists:
+    create:
+      gist_already_exist: "Gist already exist"
+    make_gist_record:
+      success: "Gist was successfully created"
+      failure: "An error occurred while saving gist"
+    server_error: "Error connecting to GitHub server"
+    success: "Gist was successfully created"
+    failure: "An error occurred while saving gist"
