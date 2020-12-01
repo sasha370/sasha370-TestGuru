@@ -17,19 +17,26 @@
     <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, autocomplete: 'email', class: 'form-control' %>
   </div>
+  <div class="need-validation">
+    <div class="form-group">
+      <%= f.label :password %>
+      <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control password_field ' %>
 
-  <div class="form-group">
-    <%= f.label :password %>
-    <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control' %>
+      <% if @minimum_password_length %>
+        <small class="form-text text-muted"><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></small>
+      <% end %>
+    </div>
 
-    <% if @minimum_password_length %>
-      <small class="form-text text-muted"><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></small>
-    <% end %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation, autocomplete: 'current-password', class: 'form-control' %>
+    <div class="form-group">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, autocomplete: 'current-password', class: 'form-control confirmation_field ' %>
+      <div class="invalid-feedback ">
+        <%= t('password_not_match') %>
+      </div>
+      <div class="valid-feedback">
+        <%= t('password_match') %>
+      </div>
+    </div>
   </div>
 
   <div class="form-group">
