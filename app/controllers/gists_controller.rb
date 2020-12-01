@@ -3,31 +3,17 @@ class GistsController < ApplicationController
   before_action :find_gist, only: %i[create make_gist_record]
 
   def create
-      if @gist
-        if gist_exist_in_github?(@gist)
-          flash[:alert] = t('gists.create.gist_already_exist')
-        else
-          @gist.destroy
-          make_gist_record
-        end
+    if @gist
+      if gist_exist_in_github?(@gist)
+        flash[:alert] = t('gists.create.gist_already_exist')
       else
+        @gist.destroy
         make_gist_record
       end
-      redirect_to @test_passage
-  end
-
-  def make_gist_record
-    begin
-      resource = create_gist_on_github(@question)
-      if resource.any?
-        create_gist_in_db(resource)
-        flash[:notice] = t('.success')
-      else
-        flash[:alert] = t('.failure')
-      end
-    rescue
-      flash[:alert] = t('.server_error')
+    else
+      make_gist_record
     end
+    redirect_to @test_passage
   end
 
   def show
@@ -35,6 +21,21 @@ class GistsController < ApplicationController
   end
 
   private
+
+  def make_gist_record
+    client = create_github_client(@question)
+    if client.success?
+      resource = client.call
+      if resource
+        create_gist_in_db(resource)
+        flash[:notice] = t('.success')
+      else
+        flash[:alert] = t('.failure')
+      end
+    else
+      flash[:alert] = t('.server_error')
+    end
+  end
 
   def find_gist
     @gist = Gist.find_by(user_id: current_user, question_id: @question)
@@ -47,8 +48,8 @@ class GistsController < ApplicationController
     end
   end
 
-  def create_gist_on_github(question)
-    GistQuestionService.new(question).call
+  def create_github_client(question)
+    GistQuestionService.new(question)
   end
 
   def gist_exist_in_github?(gist)
