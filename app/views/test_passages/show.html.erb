@@ -2,9 +2,11 @@
   <div class="card-header">
     <h1> <%= t('.header', test: @test_passage.test.title) %></h1>
   </div>
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: <%= @test_passage.test_completed_percent %>%" aria-valuemin="0" aria-valuemax="100"></div>
-  </div>
+  <%= content_tag(:div,
+                  content_tag(:div, "#{@test_passage.test_completed_percent}%", class: 'text-center'),
+                  class: 'progress-bar-js',
+                  data: { percent: @test_passage.test_completed_percent }
+      ) %>
   <div class="card-body">
     <p class="lead">
       <%= t('.question_order', current: @test_passage.current_question_index, total: @test_passage.total_questions_in_test) %>
