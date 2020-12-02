@@ -15,19 +15,21 @@ document.addEventListener('turbolinks:load', function () {
       var password = passwordField.value
       var confirmation = confirmationField.value
 
-      if (confirmation !== '') {
-        if (password !== confirmation) {
-          confirmationField.classList.remove('is-valid')
-          confirmationField.classList.add('is-invalid')
-        } else {
-          confirmationField.classList.remove('is-invalid')
-          confirmationField.classList.add('is-valid')
-        }
-      } else {
+      if (confirmation === '') {
         // cleaUp field`s status if delete all chars
         confirmationField.classList.remove('is-invalid')
         confirmationField.classList.remove('is-valid')
+        return
       }
+
+      if (password !== confirmation) {
+        confirmationField.classList.remove('is-valid')
+        confirmationField.classList.add('is-invalid')
+      } else {
+        confirmationField.classList.remove('is-invalid')
+        confirmationField.classList.add('is-valid')
+      }
+
     }
   }
 })
