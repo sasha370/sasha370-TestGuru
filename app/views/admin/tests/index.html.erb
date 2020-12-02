@@ -1,10 +1,14 @@
 <h1 class="text-center"> <%= t('.header') %> </h1>
 
 <table class="table">
-  <thead class="bg-primary text-light">
+  <thead class="bg-primary text-light ">
   <tr>
     <th scope="col">#</th>
-    <th scope="col"><%= t('activerecord.attributes.test.title') %></th>
+    <th scope="col" class="sort_by_title pointer">
+      <%= t('activerecord.attributes.test.title') %>
+      <%= octicon 'arrow-up', class: 'text_success hide' %>
+      <%= octicon 'arrow-down', class: 'text_success hide' %>
+    </th>
     <th scope="col"><%= t('activerecord.attributes.test.level') %></th>
     <th scope="col"><%= t('helpers.table_col.category') %></th>
     <th scope="col"><%= t('helpers.table_col.questions') %></th>
@@ -12,7 +16,7 @@
     <th scope="col"><%= t('helpers.buttons.start') %></th>
   </tr>
   </thead>
-  <tbody>
+  <tbody class="tbody">
   <%= render @tests %>
   </tbody>
 </table>

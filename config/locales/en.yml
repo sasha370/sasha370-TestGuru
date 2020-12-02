@@ -124,3 +124,5 @@ en:
     server_error: "Error connecting to GitHub server"
     success: "Gist was successfully created"
     failure: "An error occurred while saving gist"
+  password_not_match: "Passwords will not match"
+  password_match: "Passwords match!"

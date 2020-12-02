@@ -127,5 +127,7 @@ ru:
     server_error: "Ошибка соединения с сервером GitHub"
     success: "Gist успешно сохранен"
     failure: "Во время сохранения произошла ошибка"
+  password_not_match: "Пароли не совпадают"
+  password_match: "Пароли совпадают!"
 
 
