@@ -68,6 +68,8 @@ en:
         question_count: "Questions: %{count}"
       new:
         header: "New test"
+      form_inline:
+        ok: "OK"
     questions:
       create:
         success: 'Question was successfully created.'

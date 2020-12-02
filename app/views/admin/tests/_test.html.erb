@@ -1,11 +1,19 @@
 <tr>
   <td><%= test.id %></td>
-  <td class="tableTitle"><%= test.title %></td>
+  <td class="tableTitle">
+    <%= content_tag(:span, test.title, class: 'test-title', data: { test_id: test.id }) %>
+    <%= render 'admin/tests/form_inline', test: test == @test ? @test : test %>
+  </td>
   <td><%= test.level %></td>
   <td><%= test.category.title %></td>
   <td><%= t('.question_count', count: test.questions.count) %></td>
   <td><%= link_to t('helpers.links.show'), admin_test_path(test) %></td>
-  <td><%= link_to t('helpers.links.edit'), edit_admin_test_path(test) %></td>
+  <td>
+    <%= link_to t('helpers.links.edit'), edit_admin_test_path(test),
+                class: 'form-inline-link',
+                data: { test_id: test.id }
+    %>
+  </td>
   <td><%= link_to t('helpers.links.delete'), admin_test_path(test), method: :delete %></td>
   <td><%= button_to t('helpers.buttons.start'), start_test_path(test), class: 'btn btn-sm btn-success' %></td>
 </tr>

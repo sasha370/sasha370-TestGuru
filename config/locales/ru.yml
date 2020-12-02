@@ -68,6 +68,8 @@ ru:
         question_count: "Вопросов: %{count} "
       new:
         header: "Новый тест"
+      form_inline:
+        ok: "OK"
     questions:
       create:
         success: "Вопрос был успешно создан!"

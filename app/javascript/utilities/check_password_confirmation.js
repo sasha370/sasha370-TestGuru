@@ -29,7 +29,6 @@ document.addEventListener('turbolinks:load', function () {
         confirmationField.classList.remove('is-invalid')
         confirmationField.classList.add('is-valid')
       }
-
     }
   }
 })
