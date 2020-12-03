@@ -6,7 +6,7 @@ class FeedbackMailer < ApplicationMailer
     @description = feedback[:description]
     @user = feedback[:user]
 
-    mail to: @admin,
+    mail to: @admin.email,
          subject: "#{@title}"
   end
 
