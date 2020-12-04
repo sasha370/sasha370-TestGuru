@@ -4,6 +4,8 @@ en:
       header: "Tricky tests"
     test:
       question_count: "Questions: %{count}"
+    start:
+      no_questions: "There is no questions in this test"
 
   test_passages:
     result:

@@ -4,6 +4,8 @@ ru:
       header: "Доступные тесты"
     test:
       question_count: "Кол-во вопросов: %{count}"
+    start:
+      no_questions: "В данном тесте пока нет вопросов!"
 
   test_passages:
     result:
