@@ -3,8 +3,8 @@
     <h1> <%= t('.header', test: @test_passage.test.title) %></h1>
   </div>
   <%= content_tag(:div,
-                  content_tag(:div, "#{@test_passage.test_completed_percent}%", class: 'text-center'),
-                  class: 'progress-bar-js',
+                  content_tag(:div, "#{@test_passage.test_completed_percent}%", style: "display: inline-block"),
+                  class: 'progress-bar-js text-center ',
                   data: { percent: @test_passage.test_completed_percent }
       ) %>
   <div class="card-body">
