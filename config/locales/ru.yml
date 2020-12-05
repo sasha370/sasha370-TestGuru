@@ -95,6 +95,9 @@ ru:
         header: "Перечень созданных Gist"
       destroy:
         success: "Gist был успешно удален"
+    badges:
+      new:
+        header: "Новая Награда"
 
   tests_mailer:
     complited_test:

@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_12_05_150816) do
     t.string "name", null: false
     t.string "image_url", null: false
     t.string "rule_name", null: false
-    t.string "rule_params"
+    t.string "rule_params", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

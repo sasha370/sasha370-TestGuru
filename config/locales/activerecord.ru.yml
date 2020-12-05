@@ -8,6 +8,7 @@ ru:
       question: "Вопрос"
       answer: "Ответ"
       gist: "Gist"
+      badge: "Награда"
 
     attributes:
       test:
@@ -25,7 +26,11 @@ ru:
         title: "Название"
       answer:
         body: "Вариант ответа"
-      gist:
+      badge:
+        name: "Название"
+        image_url: "Картинка"
+        rule_name: "Тип правила"
+        rule_params: "Параметры правила (критерий)"
 
 
     errors:

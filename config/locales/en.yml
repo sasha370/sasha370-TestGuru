@@ -95,6 +95,9 @@ en:
         header: "Created Gist`s"
       destroy:
         success: "Gist was successfully destroyed!"
+    badges:
+      new:
+        header: "New Badge"
 
   tests_mailer:
     complited_test:
