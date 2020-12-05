@@ -6,7 +6,8 @@ default: &default
 
 development:
   <<: *default
-  database: test_guru_development
+  adapter: sqlite3
+  database: development.sqlite3
 
 test:
   <<: *default
