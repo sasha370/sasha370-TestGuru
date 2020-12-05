@@ -4,6 +4,8 @@ ru:
       header: "Доступные тесты"
     test:
       question_count: "Кол-во вопросов: %{count}"
+    start:
+      no_questions: "В данном тесте пока нет вопросов!"
 
   test_passages:
     result:
@@ -117,7 +119,8 @@ ru:
       log_in: "Войти"
       sign_up: "Зарегистрироваться"
     footer:
-      link_to_partner: "Учебный проект в онлайн-школе %{partner}"
+      link_to_partner: "Проект в онлайн-школе %{partner}"
+      feedback: "Обратная связь"
   hello: "Добрый день, %{user}!"
   header: "Вопрос из теста %{title} с сайта TestGuru"
   gists:
@@ -131,5 +134,15 @@ ru:
     failure: "Во время сохранения произошла ошибка"
   password_not_match: "Пароли не совпадают"
   password_match: "Пароли совпадают!"
+  feedbacks:
+    new:
+      header: "Обратная связь"
+    form:
+      send: "Отправить"
+      title: "Заголовок письма"
+      description: "Текст письма"
+    create:
+      success: "Спасибо, ваш отзыв отправлен администратору!"
+      failure: "Что-то пошло не так, письмо не отправленно!"
 
 

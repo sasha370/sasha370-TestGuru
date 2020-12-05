@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     end
   end
 
-
+  resources :feedbacks, only: %i[new create]
 
   resources :test_passages, only: %i[show update] do
     resource :gist, only: %i[create destroy]

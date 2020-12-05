@@ -33,11 +33,6 @@ class Admin::TestsController < Admin::BaseController
     @questions = @test.questions
   end
 
-  def start
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test)
-  end
-
   def create
     @test = current_user.created_tests.new(tests_params)
     if @test.save

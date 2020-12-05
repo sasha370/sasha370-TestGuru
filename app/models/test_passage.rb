@@ -27,7 +27,7 @@ class TestPassage < ApplicationRecord
   end
 
   def test_completed_percent
-    (current_question_index / total_questions_in_test.to_f * 100).to_i
+    ((current_question_index - 1)  / total_questions_in_test.to_f * 100).to_i
   end
 
   def correct_answers_in_percent

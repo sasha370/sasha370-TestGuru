@@ -4,6 +4,8 @@ en:
       header: "Tricky tests"
     test:
       question_count: "Questions: %{count}"
+    start:
+      no_questions: "There is no questions in this test"
 
   test_passages:
     result:
@@ -114,7 +116,8 @@ en:
       log_in: "Log in"
       sign_up: "Sign up"
     footer:
-      link_to_partner: "Educational project at %{partner} university"
+      link_to_partner: "Project at %{partner} university"
+      feedback: "Add feedbacks"
   hello: "Hello %{user}!"
   header: "A question about %{title} from TestGuru"
   gists:
@@ -128,3 +131,13 @@ en:
     failure: "An error occurred while saving gist"
   password_not_match: "Passwords will not match"
   password_match: "Passwords match!"
+  feedbacks:
+    new:
+      header: "Feedback"
+    form:
+      send: "Send"
+      title: "Title"
+      description: "Description"
+    create:
+      success: "Thanks! Email has been sent to the administrator!"
+      failure: "Error while sending email!"

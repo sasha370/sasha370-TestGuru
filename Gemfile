@@ -17,11 +17,11 @@ gem 'faraday'
 gem "octokit"
 gem 'octicons_helper'
 gem 'jquery-rails'
-
+gem 'pg'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'faker'
-  gem 'sqlite3', '~> 1.4'
+  # gem 'sqlite3', '~> 1.4'
   gem 'dotenv-rails'
 end
 
@@ -41,7 +41,7 @@ end
 
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
 end
 
 
