@@ -4,7 +4,7 @@ class BadgeService
     @test_passage = test_passage
     @user = User.find @test_passage.user_id
     @level = @test_passage.test.level
-    @category = @test_passage.test.category
+    @category = @test_passage.test.category.title
     check_all_badge
   end
 
@@ -15,7 +15,9 @@ class BadgeService
   end
 
   def by_category_check
-    false
+    @tests_with_current_category = Test.tests_by_category(@category).count
+    @user_passed_test = @user.tests.tests_by_category(@category).passed.distinct.count
+    @user_passed_test == @tests_with_current_category
   end
 
   def by_level_check
