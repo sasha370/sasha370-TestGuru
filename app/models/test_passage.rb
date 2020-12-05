@@ -3,7 +3,7 @@ class TestPassage < ApplicationRecord
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
   before_validation :set_first_question, on: :create
-  before_update :before_update_set_next_question
+  before_update :before_update_set_next_question, if: :current_question
 
   def before_update_set_next_question
     self.current_question = next_question
@@ -36,6 +36,11 @@ class TestPassage < ApplicationRecord
 
   def success?
     correct_answers_in_percent >= PASS_TEST_PERCENT
+  end
+
+  def change_passed_status
+     self.passed = true if self.success?
+     save!
   end
 
   private
