@@ -1,0 +1,35 @@
+<%- model_class = Badge -%>
+<div class="page-header">
+
+<!--  TODO-->
+<!--  Заменить табличный вид на список карточек с Наградами-->
+
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:name) %></th>
+      <th><%= model_class.human_attribute_name(:image_url) %></th>
+      <th><%= model_class.human_attribute_name(:rule_name) %></th>
+      <th><%= model_class.human_attribute_name(:rule_params) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @badges.each do |badge| %>
+      <tr>
+        <td><%= link_to badge.id, badge_path(badge) %></td>
+        <td><%= badge.name %></td>
+        <td><%= badge.image_url %></td>
+        <td><%= badge.rule_name %></td>
+        <td><%= badge.rule_params %></td>
+        <td><%=l badge.created_at %></td>
+        <td>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -18,6 +18,7 @@ gem "octokit"
 gem 'octicons_helper'
 gem 'jquery-rails'
 gem 'pg'
+gem 'twitter-bootstrap-rails'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'faker'

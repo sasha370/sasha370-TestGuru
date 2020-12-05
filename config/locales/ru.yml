@@ -118,6 +118,8 @@ ru:
       log_out: "Выйти"
       log_in: "Войти"
       sign_up: "Зарегистрироваться"
+      admin_badges: "Управление наградами"
+      badges: "Награды"
     footer:
       link_to_partner: "Проект в онлайн-школе %{partner}"
       feedback: "Обратная связь"

@@ -115,6 +115,8 @@ en:
       log_out: "Logout"
       log_in: "Log in"
       sign_up: "Sign up"
+      admin_badges: "Admin Badges"
+      badges: "Badges"
     footer:
       link_to_partner: "Project at %{partner} university"
       feedback: "Add feedbacks"
