@@ -4,7 +4,6 @@ class CreateBadgesUsersTable < ActiveRecord::Migration[6.0]
       t.belongs_to :user
       t.belongs_to :badge
 
-
     end
   end
 end

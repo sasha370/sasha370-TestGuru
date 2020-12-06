@@ -5,16 +5,16 @@ class Badge < ApplicationRecord
 
   RULES = [
       { type: :by_category,
-        description: t('.by_category'),
-        scope: Category.all.pluck(:title) },
+        description: I18n.t('.by_category'),
+        scope: Category.all.pluck(:title)},
       { type: :by_level,
-        description: t('.by_level'),
+        description: I18n.t('.by_level'),
         scope: Test.all.distinct.pluck(:level) },
       { type: :by_attempt_number,
-        description: t('.by_attempt_number'),
+        description: I18n.t('.by_attempt_number'),
         scope: [1, 2, 3, 10] },
       { type: :by_passed_test_count,
-        description: t('.by_passed_test_count'),
+        description: I18n.t('.by_passed_test_count'),
         scope: [3, 10, 50] }
   ]
 
