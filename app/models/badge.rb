@@ -13,8 +13,8 @@ class Badge < ApplicationRecord
         description: 'Прошел тест с первой попытки',
         scope: [1, 2, 3, 10] },
       { type: :by_passed_test_count,
-        description: 'Прошел n тестов',
-        scope: [10, 50, 100] }
+        description: 'Прошел N тестов',
+        scope: [3, 10, 50] }
   ]
   validates :name, :image_name, :rule_name, :rule_params, presence: true
 
