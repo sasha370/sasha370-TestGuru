@@ -60,8 +60,8 @@ answers = Answer.create!([
                              { body: 'Неправильный', correct: false, question_id: questions[6].id }
                          ])
 
-Badge.create!(name: "За проходение всех тестов в категории HTML", image_name: "complite.jpg", rule_name: 'by_category', rule_params: categories[1].title)
-Badge.create!(name: "За проходение всех тестов в категории CSS", image_name: "complite.jpg", rule_name: 'by_category', rule_params: categories[2].title)
+Badge.create!(name: "За проходение всех тестов в категории HTML", image_name: "completed.jpg", rule_name: 'by_category', rule_params: categories[1].title)
+Badge.create!(name: "За проходение всех тестов в категории CSS", image_name: "completed.jpg", rule_name: 'by_category', rule_params: categories[2].title)
 Badge.create!(name: "За проходение любого теста с первой попытки", image_name: "first.jpg", rule_name: 'by_attempt_number', rule_params: "1")
 Badge.create!(name: "За проходение всех тестов 1го уровня", image_name: "level3.png", rule_name: 'by_level', rule_params: "1")
 Badge.create!(name: "За проходение всех тестов 2го уровня", image_name: "level3.png", rule_name: 'by_level', rule_params: "2")
