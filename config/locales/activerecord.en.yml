@@ -28,9 +28,9 @@ en:
         body: "Body"
       badge:
         name: "Name"
-        image_url: "Image"
+        image_name: "Image"
         rule_name: "Rule`s type"
-        rule_params: "Rule`s parameters (criteria)"
+        rule_params: "Criteria"
 
     errors:
       messages:

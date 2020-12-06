@@ -4,6 +4,7 @@ class TestPassage < ApplicationRecord
   belongs_to :current_question, class_name: 'Question', optional: true
   before_validation :set_first_question, on: :create
   before_update :before_update_set_next_question, if: :current_question
+  has_and_belongs_to_many :badges, dependent: :destroy
 
   def before_update_set_next_question
     self.current_question = next_question

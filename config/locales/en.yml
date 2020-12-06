@@ -27,11 +27,13 @@ en:
       questions: "Questions"
       answers: "Answers"
       category: "Category"
+      created_at: "Created at"
     links:
       edit: "Edit"
       destroy: "Destroy"
       show: "Show"
       delete: "Delete"
+      new: "New"
     buttons:
       start: "Start"
       next: "Next"
@@ -52,6 +54,7 @@ en:
       answer:
         body: "Answer body"
         correct: "Correct?"
+    confirm: "Are you sure?"
 
   admin:
     tests:
@@ -98,6 +101,8 @@ en:
     badges:
       new:
         header: "New Badge"
+      show:
+
 
   tests_mailer:
     complited_test:
@@ -146,3 +151,8 @@ en:
     create:
       success: "Thanks! Email has been sent to the administrator!"
       failure: "Error while sending email!"
+  badges:
+    index:
+      title: "Your`s badges"
+      all_badges: "List of all badges"
+      condition: "Condition"

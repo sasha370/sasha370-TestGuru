@@ -1,5 +1,15 @@
 <%- model_class = Badge -%>
+<div class="card">
+  <div class="card-header">
+
 <div class="page-header">
-  <h1><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h1>
+  <h2><%=t 'helpers.links.edit'%></h2>
 </div>
+  </div>
+  <div class="card-body">
 <%= render :partial => 'form' %>
+  </div>
+  <div class="card-footer">
+    <%= link_to t('helpers.navigation.back'), admin_badges_path, class: 'btn btn-sm btn-secondary' %>
+  </div>
+</div>

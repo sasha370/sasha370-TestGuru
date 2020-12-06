@@ -6,17 +6,19 @@
 /*sticky footer*/
 
 html {
-    position: relative;
-    min-height: 100%;
+  position: relative;
+  min-height: 100%;
 }
+
 body {
-    margin: 0 0 100px;
+  padding-bottom: 50px;
 }
+
 .footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-//height: 200px;
-    width: 100%;
-    overflow: hidden;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  //overflow: hidden;
 }

@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  image_url: MyString
+  image_name: MyString
   rule_name: MyString
 
 two:
   name: MyString
-  image_url: MyString
+  image_name: MyString
   rule_name: MyString

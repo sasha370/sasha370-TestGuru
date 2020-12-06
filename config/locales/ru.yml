@@ -27,11 +27,13 @@ ru:
       questions: "Вопросы"
       answers: "Ответы"
       category: "Категория"
+      created_at: "Создано"
     links:
       edit: "Редактировать"
       destroy: "Удалить"
       show: "Показать"
       delete: "Удалить"
+      new: "Новый"
     buttons:
       start: "Начать"
       next: "Далее"
@@ -52,6 +54,7 @@ ru:
       answer:
         body: "Текст ответа"
         correct: "Правильный?"
+    confirm: "Вы уверенны?"
 
   admin:
     tests:
@@ -98,6 +101,8 @@ ru:
     badges:
       new:
         header: "Новая Награда"
+      show:
+
 
   tests_mailer:
     complited_test:
@@ -149,5 +154,10 @@ ru:
     create:
       success: "Спасибо, ваш отзыв отправлен администратору!"
       failure: "Что-то пошло не так, письмо не отправленно!"
+  badges:
+    index:
+      title: "Ваши награды"
+      all_badges: "Список всех доступных наград"
+      condition: "Условие"
 
 

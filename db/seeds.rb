@@ -14,8 +14,8 @@ categories = Category.create!([
                               ])
 
 tests = Test.create!([
-                         { title: "Ruby start", level: 1, category_id: categories[0].id,author: admin[0]},
-                         { title: "RoR start", level: 2, category_id: categories[0].id,author: admin[0] },
+                         { title: "Ruby start", level: 4, category_id: categories[0].id,author: admin[0]},
+                         { title: "RoR start", level: 3, category_id: categories[0].id,author: admin[0] },
                          { title: "HTML base", level: 1, category_id: categories[1].id,author: admin[0] },
                          { title: "CSS base", level: 1, category_id: categories[2].id,author: admin[0] }
                      ])
@@ -32,28 +32,35 @@ questions = Question.create!([
                              ])
 
 answers = Answer.create!([
-                             { body: 'Dynamic', correct: true, question_id: questions[0].id },
+                             { body: 'Правильный', correct: true, question_id: questions[0].id },
                              { body: 'Strict', correct: false, question_id: questions[0].id },
                              { body: 'ActiveRecord', correct: false, question_id: questions[0].id },
                              { body: 'CommandRecorder', correct: false, question_id: questions[0].id },
 
-                             { body: 'Dynamic', correct: true, question_id: questions[1].id },
+                             { body: 'Правильный', correct: true, question_id: questions[1].id },
                              { body: 'Strict', correct: false, question_id: questions[1].id },
                              { body: 'ActiveRecord', correct: false, question_id: questions[1].id },
                              { body: 'CommandRecorder', correct: false, question_id: questions[1].id },
 
-                             { body: 'Dynamic', correct: true, question_id: questions[2].id },
+                             { body: 'Правильный', correct: true, question_id: questions[2].id },
                              { body: 'Strict', correct: false, question_id: questions[2].id },
-                             { body: 'ActiveRecord', correct: false, question_id: questions[2].id },
-                             { body: 'CommandRecorder', correct: false, question_id: questions[2].id },
+                             { body: 'Правильный', correct: true, question_id: questions[4].id },
+                             { body: 'Правильный', correct: true, question_id: questions[5].id },
 
-                             { body: 'Dynamic', correct: true, question_id: questions[3].id },
+                             { body: 'Правильный', correct: true, question_id: questions[3].id },
                              { body: 'Strict', correct: false, question_id: questions[3].id },
-                             { body: 'ActiveRecord', correct: false, question_id: questions[3].id },
-                             { body: 'CommandRecorder', correct: false, question_id: questions[3].id },
 
-                             { body: "<a href='some_link'...", correct: true, question_id: questions[4].id },
-                             { body: "<a http='some_link'...", correct: false, question_id: questions[4].id },
-                             { body: 'Tags', correct: true, question_id: questions[4].id },
-                             { body: 'Functions', correct: 0, question_id: questions[4].id }
+                             { body: 'Правильный', correct: true, question_id: questions[7].id },
+                             { body: 'CommandRecorder', correct: false, question_id: questions[7].id },
+
+                             { body: "Правильный", correct: true, question_id: questions[4].id },
+                             { body: "Неправильный", correct: false, question_id: questions[4].id },
+
+                             { body: 'Правильный', correct: true, question_id: questions[6].id },
+                             { body: 'Неправильный', correct: false, question_id: questions[6].id }
                          ])
+
+Badge.create!(name: "За проходение всех тестов в категории HTML", image_name: "4.jpg", rule_name: 'by_category', rule_params: categories[1].title)
+Badge.create!(name: "За проходение всех тестов в категории CSS", image_name: "3.png", rule_name: 'by_category', rule_params: categories[2].title)
+Badge.create!(name: "За проходение теста с первой попытки", image_name: "1.jpg", rule_name: 'by_attempt_number', rule_params: "1")
+Badge.create!(name: "За проходение всех тестов в одного уровня", image_name: "2.png", rule_name: 'by_level', rule_params: "1")

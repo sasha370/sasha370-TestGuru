@@ -28,9 +28,9 @@ ru:
         body: "Вариант ответа"
       badge:
         name: "Название"
-        image_url: "Картинка"
+        image_name: "Картинка"
         rule_name: "Тип правила"
-        rule_params: "Параметры правила (критерий)"
+        rule_params: "Критерий"
 
 
     errors:

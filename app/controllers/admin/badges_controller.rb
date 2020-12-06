@@ -18,8 +18,10 @@ class Admin::BadgesController < Admin::BaseController
   end
 
   def create
+
     @badge = Badge.new(badge_params)
     if @badge.save
+
       redirect_to [:admin, @badge], notice: 'Badge was successfully created.'
     else
       render :new, alert: 'Нужно азаполнить все поля'
@@ -59,6 +61,7 @@ class Admin::BadgesController < Admin::BaseController
   end
 
   def badge_params
-    params.require(:badge).permit(:name, :image_url, :rule_name, :rule_params)
+
+    params.require(:badge).permit(:name, :image_name, :rule_name, :rule_params)
   end
 end

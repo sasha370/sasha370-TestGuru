@@ -6,25 +6,40 @@
     <%= f.text_field :name, :class => 'form-control' %>
   </div>
 
-  <div class="form-group">
-    <%= f.label :image_url %>
-    <%= f.select :image_url, @images, :class => 'form-control' %>
+  <div class="form-group ">
+    <%= f.label :image_name %>
+    <div class="form-check-inline">
+      <% @images.each do |image| %>
+        <div class="col ml-2 text-center">
+          <label class="form-check-label row" for="<%= image %>">
+            <%= image_tag(image, height: "70", class: 'mx-auto d-block') %>
+          </label>
+          <div class="row">
+            <%= f.radio_button :image_name, image %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
+    <hr>
 
-  <div class="form-group">
-    <%= f.label :rule_name %>
-    <%= f.select :rule_name, @rules %>
-  </div>
-
-<!--  <div class="form-group">-->
-    <%#= f.label :rule_params %>
-    <%#= f.select :rule_params, :class => 'form-control' %>
-<!--  </div>-->
-
-  <div class="form-group">
-    <%= f.label :rule_params, "Напишите: Название Категории/или  Уровень/или  Кол-во попаток  " %>
-    <%= f.text_field :rule_params, :class => 'form-control' %>
-  </div>
+    <% @rules.each do |rule| %>
+        <div class="form-group">
+          <div class="form-check">
+            <%= f.radio_button :rule_name, rule[:type] %>
+            <%= rule[:description] %>
+            <% rule[:scope].each do |item| %>
+              <div class="form-check">
+                <%= f.radio_button :rule_params, item %>
+                <label class="form-check-label" for="<%= item %>">
+                  <%= item %>
+                </label>
+              </div>
+            <% end %>
+          </div>
+        </div>
+    <hr>
+    <% end %>
 
   <div class="form-group">
     <%= f.submit class: 'btn btn-primary' %>
@@ -32,13 +47,3 @@
 
 <% end %>
 
-<!--TODO-->
-<!--Список доступных категорий-->
-<% Category.all.each do |item| %>
-  <%= item.title %> <br>
-<% end %>
-<!--TODO-->
-<!--Список доступных уровней-->
-<% Test.distinct.pluck(:level).each do |item| %>
-  <%= item %> <br>
-<% end %>
