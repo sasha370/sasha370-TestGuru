@@ -21,16 +21,15 @@ class Admin::BadgesController < Admin::BaseController
 
     @badge = Badge.new(badge_params)
     if @badge.save
-
-      redirect_to [:admin, @badge], notice: 'Badge was successfully created.'
+      redirect_to [:admin, @badge], notice: t('.success')
     else
-      render :new, alert: 'Нужно азаполнить все поля'
+      render :new, alert: t('.failed')
     end
   end
 
   def update
     if @badge.update(badge_params)
-      redirect_to [:admin, @badge], notice: 'Badge was successfully updated.'
+      redirect_to [:admin, @badge], notice: t('.success')
     else
       render :edit
     end
@@ -38,7 +37,7 @@ class Admin::BadgesController < Admin::BaseController
 
   def destroy
     @badge.destroy
-    redirect_to admin_badges_url, notice: 'Badge was successfully destroyed.'
+    redirect_to admin_badges_url, notice: t('.success')
   end
 
   private
@@ -61,7 +60,6 @@ class Admin::BadgesController < Admin::BaseController
   end
 
   def badge_params
-
     params.require(:badge).permit(:name, :image_name, :rule_name, :rule_params)
   end
 end

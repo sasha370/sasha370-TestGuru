@@ -6,7 +6,7 @@ class BadgeService
     check_all_badge
   end
 
-  # private
+  private
 
   def check_all_badge
     Badge.all.each do |badge|
@@ -37,7 +37,7 @@ class BadgeService
 
   def by_attempt_number_check(badge)
     attempt = badge.rule_params.to_i
-    all_attempt = TestPassage.where(user_id: @user.id, test_id: @test_passage.test_id).count
+    all_attempt = TestPassage.where(user_id: @user, test_id: @test_passage.test_id).count
     all_attempt == attempt && @test_passage.passed
   end
 

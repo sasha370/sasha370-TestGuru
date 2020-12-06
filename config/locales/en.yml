@@ -12,6 +12,7 @@ en:
       header: "Test %{title} completed!"
       pass_test: "Congratulations! You passed the test because answered %{percent} questions correct"
       lose_test: "You did not pass the test because answered correctly in all %{percent} questions"
+      badges: "You have received the following awards"
     show:
       header: "You doing %{test} test"
       question_order: "Question %{current} of %{total}"
@@ -102,6 +103,13 @@ en:
       new:
         header: "New Badge"
       show:
+      create:
+        success: "Badge was successfully created"
+        failed: "There is some error"
+      update:
+        success: "Badge was successfully updated"
+      destroy:
+        success: "Badge was successfully destroyed"
 
 
   tests_mailer:
