@@ -29,6 +29,7 @@ ru:
       answers: "Ответы"
       category: "Категория"
       created_at: "Создано"
+      timer: "Таймер"
     links:
       edit: "Редактировать"
       destroy: "Удалить"

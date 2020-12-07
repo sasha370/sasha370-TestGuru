@@ -29,6 +29,7 @@ en:
       answers: "Answers"
       category: "Category"
       created_at: "Created at"
+      timer: "Timer"
     links:
       edit: "Edit"
       destroy: "Destroy"

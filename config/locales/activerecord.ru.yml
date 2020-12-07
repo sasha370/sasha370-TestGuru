@@ -9,6 +9,7 @@ ru:
       answer: "Ответ"
       gist: "Gist"
       badge: "Награда"
+      timer: "Таймер: %{timer} мин."
 
     attributes:
       test:
@@ -16,6 +17,8 @@ ru:
         level: "Уровень"
         category_id: "Категория"
         user_id: "Автор"
+        timer: "Таймер"
+        minute: "мин."
       user:
         first_name: "Имя"
         last_name: "Фамилия"
@@ -48,5 +51,7 @@ ru:
   by_level: "Все тесты одного уровня"
   by_attempt_number: "Прошел тест с N-ой попытки"
   by_passed_test_count: "Прошел N тестов"
+
+
 
 
