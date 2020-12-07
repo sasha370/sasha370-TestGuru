@@ -7,7 +7,7 @@ document.addEventListener('turbolinks:load', function () {
   // calculate remaining time
   function getTimeRemaining(endTime) {
     let t = endTime - Date.parse(new Date());
-    let minutes = Math.floor((t / 1000 / 60) ); // Minute count without hours, e.t.  '120 min' displayed in three digits
+    let minutes = Math.floor((t / 1000 / 60)); // Minute count without hours, e.t.  '120 min' displayed in three digits
     let seconds = Math.floor((t / 1000) % 60);
     return {
       'total': t,

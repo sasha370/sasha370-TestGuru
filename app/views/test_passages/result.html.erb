@@ -12,6 +12,6 @@
 </div>
 
 <% if @test_passage.badges.any? %>
-  <h2> <%= t('.badges')%>: </h2>
+  <h2> <%= t('.badges') %>: </h2>
   <%= render 'badges/badge', badges: @test_passage.badges %>
 <% end %>
