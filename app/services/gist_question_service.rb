@@ -1,5 +1,6 @@
 class GistQuestionService
   attr_reader :client
+
   def initialize(question, client: nil)
     @question = question
     @test = @question.test

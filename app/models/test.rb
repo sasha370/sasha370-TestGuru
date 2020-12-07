@@ -15,7 +15,7 @@ class Test < ApplicationRecord
   scope :hard, -> { where(level: 5..Float::INFINITY) }
   scope :tests_by_category, -> (category_name) { joins(:category).where("categories.title = ?", category_name) }
   scope :tests_by_level, -> (level) { where("level = ?", level) }
-  scope :passed, ->  { joins(:test_passages).where("test_id: ?, test_passages.passed = ?", self.id, true)}
+  scope :passed, -> { joins(:test_passages).where("test_id: ?, test_passages.passed = ?", self.id, true) }
 
   def self.find_by_category(category_name)
     tests_by_category(category_name).order(title: :desc).pluck(:title)

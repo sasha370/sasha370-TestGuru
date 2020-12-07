@@ -6,6 +6,8 @@ class TestPassage < ApplicationRecord
   before_update :before_update_set_next_question, if: :current_question
   has_and_belongs_to_many :badges, dependent: :destroy
 
+  scope :passed, -> { where('passed = ?', true) }
+
   def before_update_set_next_question
     self.current_question = next_question
   end
@@ -28,7 +30,7 @@ class TestPassage < ApplicationRecord
   end
 
   def test_completed_percent
-    ((current_question_index - 1)  / total_questions_in_test.to_f * 100).to_i
+    ((current_question_index - 1) / total_questions_in_test.to_f * 100).to_i
   end
 
   def correct_answers_in_percent
@@ -40,8 +42,8 @@ class TestPassage < ApplicationRecord
   end
 
   def change_passed_status
-     self.passed = true if self.success?
-     save!
+    self.passed = true if self.success?
+    save!
   end
 
   private
