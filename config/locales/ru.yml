@@ -12,6 +12,7 @@ ru:
       header: "Тест %{title} завершен!"
       pass_test: "Поздравляю! Вы прошли тест, т.к. ответили на %{percent} вопросов правильно"
       lose_test: "Вы не прошли тест, т.к. ответили правильно всего на %{percent} вопросов"
+      badges: "Вы получили следующие награды"
     show:
       header: "Вы проходите тест: %{test}"
       question_order: "Вопрос %{current} из %{total}"
@@ -27,11 +28,13 @@ ru:
       questions: "Вопросы"
       answers: "Ответы"
       category: "Категория"
+      created_at: "Создано"
     links:
       edit: "Редактировать"
       destroy: "Удалить"
       show: "Показать"
       delete: "Удалить"
+      new: "Новый"
     buttons:
       start: "Начать"
       next: "Далее"
@@ -52,6 +55,7 @@ ru:
       answer:
         body: "Текст ответа"
         correct: "Правильный?"
+    confirm: "Вы уверенны?"
 
   admin:
     tests:
@@ -95,6 +99,18 @@ ru:
         header: "Перечень созданных Gist"
       destroy:
         success: "Gist был успешно удален"
+    badges:
+      new:
+        header: "Новая Награда"
+      show:
+      create:
+        success: "Награда была успешно создана"
+        failed: "Во воремя создания произошла ошибка"
+      update:
+        success: "Награда была успешно обновлена"
+      destroy:
+        success: "Награда была успешно удалена"
+
 
   tests_mailer:
     complited_test:
@@ -118,6 +134,8 @@ ru:
       log_out: "Выйти"
       log_in: "Войти"
       sign_up: "Зарегистрироваться"
+      admin_badges: "Управление наградами"
+      badges: "Награды"
     footer:
       link_to_partner: "Проект в онлайн-школе %{partner}"
       feedback: "Обратная связь"
@@ -144,5 +162,10 @@ ru:
     create:
       success: "Спасибо, ваш отзыв отправлен администратору!"
       failure: "Что-то пошло не так, письмо не отправленно!"
+  badges:
+    index:
+      title: "Ваши награды"
+      all_badges: "Список всех доступных наград"
+      condition: "Условие"
 
 

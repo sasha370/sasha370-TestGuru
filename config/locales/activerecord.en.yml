@@ -8,6 +8,7 @@ en:
       question: "Question"
       answer: "Answer"
       gist: "Gist"
+      badge: "Badge"
 
     attributes:
       test:
@@ -25,7 +26,11 @@ en:
         title: "Title"
       answer:
         body: "Body"
-      gist:
+      badge:
+        name: "Name"
+        image_name: "Image"
+        rule_name: "Rule`s type"
+        rule_params: "Criteria"
 
     errors:
       messages:
@@ -36,6 +41,10 @@ en:
   edit_answer: "Edit answer for question %{question}"
   uniq_title_level: "should have uniq name and level"
   cant_create_more_answer: "You can`t create more that 4 answer for question"
+  by_category: "All tests of the same category"
+  by_level: "All tests are of the same level"
+  by_attempt_number: "Passed the test on the N`th try"
+  by_passed_test_count: "Passed N`th tests"
 
 
 

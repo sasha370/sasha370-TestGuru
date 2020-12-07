@@ -6,11 +6,13 @@ default: &default
 
 development:
   <<: *default
-  database: test_guru_development
+  adapter: sqlite3
+  database: db/development.sqlite3
 
 test:
   <<: *default
-  database: test_guru_development_test
+  adapter: sqlite3
+  database: db/test_development.sqlite3
 
 production:
   <<: *default

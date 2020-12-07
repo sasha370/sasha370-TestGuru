@@ -12,6 +12,7 @@ en:
       header: "Test %{title} completed!"
       pass_test: "Congratulations! You passed the test because answered %{percent} questions correct"
       lose_test: "You did not pass the test because answered correctly in all %{percent} questions"
+      badges: "You have received the following awards"
     show:
       header: "You doing %{test} test"
       question_order: "Question %{current} of %{total}"
@@ -27,11 +28,13 @@ en:
       questions: "Questions"
       answers: "Answers"
       category: "Category"
+      created_at: "Created at"
     links:
       edit: "Edit"
       destroy: "Destroy"
       show: "Show"
       delete: "Delete"
+      new: "New"
     buttons:
       start: "Start"
       next: "Next"
@@ -52,6 +55,7 @@ en:
       answer:
         body: "Answer body"
         correct: "Correct?"
+    confirm: "Are you sure?"
 
   admin:
     tests:
@@ -95,6 +99,18 @@ en:
         header: "Created Gist`s"
       destroy:
         success: "Gist was successfully destroyed!"
+    badges:
+      new:
+        header: "New Badge"
+      show:
+      create:
+        success: "Badge was successfully created"
+        failed: "There is some error"
+      update:
+        success: "Badge was successfully updated"
+      destroy:
+        success: "Badge was successfully destroyed"
+
 
   tests_mailer:
     complited_test:
@@ -115,6 +131,8 @@ en:
       log_out: "Logout"
       log_in: "Log in"
       sign_up: "Sign up"
+      admin_badges: "Admin Badges"
+      badges: "Badges"
     footer:
       link_to_partner: "Project at %{partner} university"
       feedback: "Add feedbacks"
@@ -141,3 +159,8 @@ en:
     create:
       success: "Thanks! Email has been sent to the administrator!"
       failure: "Error while sending email!"
+  badges:
+    index:
+      title: "Your`s badges"
+      all_badges: "List of all badges"
+      condition: "Condition"

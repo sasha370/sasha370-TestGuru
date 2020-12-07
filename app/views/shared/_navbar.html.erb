@@ -10,6 +10,9 @@
         <li class="nav-item active">
           <%= link_to t('.tests'), tests_path, class: 'nav-link' %>
         </li>
+      <li class="nav-item active">
+        <%= link_to t('.badges'), badges_path, class: 'nav-link' %>
+      </li>
       </ul>
       <% if current_user.admin? %>
         <ul class="navbar-nav mr-auto">
@@ -17,7 +20,9 @@
             <%= link_to t('.admin_tests'), admin_tests_path, class: 'nav-link' %>
           </li>
           <li class="nav-item active">
-            <!--            TODO -->
+            <%= link_to t('.admin_badges'), admin_badges_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item active">
             <%= link_to t('.gists'), admin_gists_path, class: 'nav-link' %>
           </li>
         </ul>

@@ -1,0 +1,33 @@
+<%- model_class = Badge -%>
+<div class="card col">
+  <div class="card-header">
+    <div class="page-header">
+      <h2><%= t 'activerecord.models.badge' %></h2>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <dl class="dl-horizontal">
+      <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+      <dd><%= @badge.name %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:image_name) %>:</strong></dt>
+      <dd><%= image_tag(@badge.image_name, height: "70",  class: ' d-block') %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:rule_name) %>:</strong></dt>
+      <dd><%= @badge.rule_name %></dd>
+      <dt><strong><%= model_class.human_attribute_name(:rule_params) %>:</strong></dt>
+      <dd><%= @badge.rule_params %></dd>
+    </dl>
+  </div>
+
+  <div class="card-footer">
+    <%= link_to t('helpers.navigation.back'),
+                admin_badges_path, :class => 'btn btn-secondary' %>
+    <%= link_to t('helpers.links.edit'),
+                edit_admin_badge_path(@badge), :class => 'btn btn-warning' %>
+    <%= link_to t('helpers.links.destroy'),
+                admin_badge_path(@badge),
+                :method => 'delete',
+                :data => { :confirm => t('helpers.confirm') },
+                :class => 'btn btn-danger' %>
+  </div>
+</div>

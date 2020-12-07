@@ -1,0 +1,13 @@
+<%- model_class = Badge -%>
+<div class="page-header">
+  <h2 class="text-center"><%= t '.title' %></h2>
+</div>
+
+<%= render 'badges/badge', badges: @users_badges %>
+
+<div class="page-header">
+  <h2 class="text-center"><%= t '.all_badges' %></h2>
+</div>
+
+<%= render 'badges/badge', badges: @badges %>
+
