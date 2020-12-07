@@ -1,8 +1,16 @@
 <div class="card">
   <div class="card-header">
     <h2 class="float-left "> <%= t('.header', test: @test_passage.test.title) %></h2>
-    <h3 class="float-right timer"><%= @test_passage.test.timer if @test_passage.test.timer %></h3>
-    <!--    TODO-->
+
+    <% if @test_passage.test.has_timer? %>
+      <h3 class="float-right " id='clock'>
+        <span class="minutes"></span>
+        <span>:</span>
+        <span class="seconds"></span>
+      </h3>
+      <h3 class="hide text-danger float-right" id='time-over'> <%= t('.time-over') %> </h3>
+      <span id='hidden-time' class="hide"><%= @test_passage.time_left %></span>
+    <% end %>
   </div>
 
   <%= content_tag(:div,

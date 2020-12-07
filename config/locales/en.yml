@@ -17,6 +17,7 @@ en:
       header: "You doing %{test} test"
       question_order: "Question %{current} of %{total}"
       gist_question: "Save in Gist"
+      time-over: "Time is over!!!"
 
 
   helpers:

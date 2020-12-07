@@ -17,6 +17,7 @@ ru:
       header: "Вы проходите тест: %{test}"
       question_order: "Вопрос %{current} из %{total}"
       gist_question: "Сохранить в Gist"
+      time-over: "Время вышло!!!"
 
 
   helpers:

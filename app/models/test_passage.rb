@@ -46,6 +46,10 @@ class TestPassage < ApplicationRecord
     save!
   end
 
+  def time_left
+    (created_at + test.timer * 60).to_i * 1000
+  end
+
   private
 
   PASS_TEST_PERCENT = 85
