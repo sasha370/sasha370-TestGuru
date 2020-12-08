@@ -19,7 +19,6 @@ ru:
       gist_question: "Сохранить в Gist"
       time-over: "Время вышло!!!"
 
-
   helpers:
     submit:
       create: "Создать %{model}"
@@ -113,11 +112,9 @@ ru:
       destroy:
         success: "Награда была успешно удалена"
 
-
   tests_mailer:
     complited_test:
       subject: 'Вы закончили текст на сайте TestGuru!'
-
 
   shared:
     error:
@@ -169,5 +166,3 @@ ru:
       title: "Ваши награды"
       all_badges: "Список всех доступных наград"
       condition: "Условие"
-
-

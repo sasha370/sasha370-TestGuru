@@ -19,7 +19,6 @@ en:
       gist_question: "Save in Gist"
       time-over: "Time is over!!!"
 
-
   helpers:
     submit:
       create: "Create %{model}"
@@ -112,7 +111,6 @@ en:
         success: "Badge was successfully updated"
       destroy:
         success: "Badge was successfully destroyed"
-
 
   tests_mailer:
     complited_test:

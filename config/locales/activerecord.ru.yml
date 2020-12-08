@@ -35,7 +35,6 @@ ru:
         rule_name: "Тип правила"
         rule_params: "Критерий"
 
-
     errors:
       messages:
         blank: "не может быть пустым!"
@@ -51,7 +50,3 @@ ru:
   by_level: "Все тесты одного уровня"
   by_attempt_number: "Прошел тест с N-ой попытки"
   by_passed_test_count: "Прошел N тестов"
-
-
-
-
