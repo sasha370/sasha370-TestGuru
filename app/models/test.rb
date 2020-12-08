@@ -20,4 +20,8 @@ class Test < ApplicationRecord
   def self.find_by_category(category_name)
     tests_by_category(category_name).order(title: :desc).pluck(:title)
   end
+
+  def has_timer?
+    timer.present?
+  end
 end

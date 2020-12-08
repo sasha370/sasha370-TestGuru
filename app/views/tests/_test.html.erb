@@ -3,6 +3,7 @@
   <td class="tableTitle"><%= test.title %></td>
   <td><%= test.level %></td>
   <td><%= test.category.title %></td>
+  <td><%= test.timer %> </td>
   <td><%= t('.question_count', count: test.questions.count) %></td>
   <td><%= button_to t('helpers.buttons.start'), start_test_path(test), class: 'btn btn-sm btn-success' %></td>
 </tr>

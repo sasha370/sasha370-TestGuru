@@ -9,6 +9,7 @@ en:
       answer: "Answer"
       gist: "Gist"
       badge: "Badge"
+      timer: "Timer: %{timer} min"
 
     attributes:
       test:
@@ -16,6 +17,8 @@ en:
         level: "Level"
         category_id: "Category"
         user_id: "Author"
+        timer: "Timer"
+        minute: "min"
       user:
         first_name: "First name"
         last_name: "Last name"
@@ -45,6 +48,3 @@ en:
   by_level: "All tests are of the same level"
   by_attempt_number: "Passed the test on the N`th try"
   by_passed_test_count: "Passed N`th tests"
-
-
-

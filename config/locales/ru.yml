@@ -17,7 +17,7 @@ ru:
       header: "Вы проходите тест: %{test}"
       question_order: "Вопрос %{current} из %{total}"
       gist_question: "Сохранить в Gist"
-
+      time-over: "Время вышло!!!"
 
   helpers:
     submit:
@@ -29,6 +29,7 @@ ru:
       answers: "Ответы"
       category: "Категория"
       created_at: "Создано"
+      timer: "Таймер"
     links:
       edit: "Редактировать"
       destroy: "Удалить"
@@ -111,11 +112,9 @@ ru:
       destroy:
         success: "Награда была успешно удалена"
 
-
   tests_mailer:
     complited_test:
       subject: 'Вы закончили текст на сайте TestGuru!'
-
 
   shared:
     error:
@@ -167,5 +166,3 @@ ru:
       title: "Ваши награды"
       all_badges: "Список всех доступных наград"
       condition: "Условие"
-
-
